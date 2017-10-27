@@ -1,8 +1,17 @@
 .personal-bio {
+  display: grid;
+  grid-template-columns: 40% 60%;
   border: medium black solid;
-  width: 50%;
   padding: 10px;
-  float: right;
+  width: 60%;
+}
+
+.personal-bio .text {
+  grid-column: 2;
+}
+
+.personal-bio img {
+  grid-column: 1;
 }
 
 .personal-content {
