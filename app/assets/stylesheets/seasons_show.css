@@ -1,26 +1,26 @@
 /* START Season Spring */
-body {
+.seasons-show-Spring {
   background-color: Yellow;
 }
 /* END Season Spring */
 
 
 /* START Season Summer */
-body {
+.seasons-show-Summer {
   background-color: Red;
 }
 /* END Season Summer */
 
 
 /* START Season Fall */
-body {
+.seasons-show-Fall {
   background-color: Orange;
 }
 /* END Season Fall */
 
 
 /* START Season Winter */
-body {
+.seasons-show-Winter {
   background-color: Gray;
 }
 /* END Season Winter */
