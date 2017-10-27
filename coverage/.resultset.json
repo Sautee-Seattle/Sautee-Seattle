@@ -1,50 +1,62 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/helpers/application_helper.rb": [
+      "/Users/apprentice/Desktop/nickspicks/Sautee-Seattle/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/nickspicks/Sautee-Seattle/app/controllers/application_controller.rb": [
+        1,
         1,
         null
       ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/models/user.rb": [
+      "/Users/apprentice/Desktop/nickspicks/Sautee-Seattle/app/models/user.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/channels/application_cable/channel.rb": [
+      "/Users/apprentice/Desktop/nickspicks/Sautee-Seattle/app/controllers/templates_controller.rb": [
         0,
         0,
         0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/channels/application_cable/connection.rb": [
-        0,
+        null,
         0,
         0,
         0
       ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/controllers/application_controller.rb": [
+      "/Users/apprentice/Desktop/nickspicks/Sautee-Seattle/app/controllers/users_controller.rb": [
         0,
         0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/jobs/application_job.rb": [
         0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        null,
+        0,
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1509138368
+    "timestamp": 1509146591
   }
 }
