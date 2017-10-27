@@ -24,3 +24,12 @@
   background-color: Gray;
 }
 /* END Season Winter */
+
+.seasons-show-produce {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-areas:
+  "header  header  header"
+  "left middle right"
+  "footer  footer  footer";
+}

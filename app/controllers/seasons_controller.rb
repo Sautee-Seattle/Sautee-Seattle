@@ -4,7 +4,7 @@ class SeasonsController < ApplicationController
   end
 
   def show
-    @season = Season.create!(name: "Summer")
+    @season = Season.create!(name: "Spring")
     render :show
   end
 
