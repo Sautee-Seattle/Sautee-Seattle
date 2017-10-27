@@ -1,0 +1,9 @@
+.personal-bio {
+  border: thin black solid;
+  width: 50%;
+  float: right;
+}
+
+.personal-content {
+  border: thin red solid;
+}
