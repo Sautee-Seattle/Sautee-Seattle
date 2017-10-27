@@ -1,0 +1,2 @@
+class SeasonsIngredient < ApplicationRecord
+end
