@@ -1,0 +1,10 @@
+<nav class="login-nav">
+  <ul>
+    <% unless session[:user_id] %>
+      <li>Login</li>
+      <li>Register</li>
+    <% else %>
+      <li>Logout</li>
+    <% end %>
+  </ul>
+</nav>
