@@ -1,8 +1,23 @@
-<section>
-  <div class="seasons-header">
-    <h3>Sautee Seattle - Seasonal Produce</h3>
-    <h1><%= season.name %></h1>
-    <h4>This Seasons Produce!</h4>
+<% if season.name == "Spring" %>
+<% elsif season.name == "Summer" %>
+<% elsif season.name == "Fall" %>
+  <% Element.setAttribute("current-season-spring", "current-season-fall"); %>
+<% else # season.name == "Winter" %>
+<% end %>
+
+<section class="seasons-show">
+  <div class="current-season-spring">
+
+    </div>
+    <div class="seasons-show-header">
+      <h3>Sautee Seattle - Seasonal Produce</h3>
+      <h1><%= season.name %></h1>
+      <h4>This Seasons Produce!</h4>
+    </div>
+
+    <div class="seasons-show-produce">
+
+    </div>
+
   </div>
-    
 </section>
