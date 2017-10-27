@@ -1,8 +1,8 @@
 class CreateSeasonsIngredients < ActiveRecord::Migration[5.1]
   def change
     create_table :seasons_ingredients do |t|
-      t.references :ingredients, null: false
-      t.references :seasons, null: false
+      t.references :ingredient, null: false
+      t.references :season, null: false
 
       t.timestamps
     end

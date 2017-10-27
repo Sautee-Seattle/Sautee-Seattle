@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(version: 20171027223735) do
   end
 
   create_table "seasons_ingredients", force: :cascade do |t|
-    t.bigint "ingredients_id", null: false
-    t.bigint "seasons_id", null: false
+    t.bigint "ingredient_id", null: false
+    t.bigint "season_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ingredients_id"], name: "index_seasons_ingredients_on_ingredients_id"
-    t.index ["seasons_id"], name: "index_seasons_ingredients_on_seasons_id"
+    t.index ["ingredient_id"], name: "index_seasons_ingredients_on_ingredient_id"
+    t.index ["season_id"], name: "index_seasons_ingredients_on_season_id"
   end
 
 end
