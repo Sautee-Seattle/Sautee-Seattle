@@ -30,6 +30,7 @@
 
 .personal-content span a {
   display: inline-block;
+  padding: 2px;
   border: medium black solid;
   margin-left: 5px;
   margin-top: 5px;
