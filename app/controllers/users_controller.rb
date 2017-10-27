@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def show
+    @user = User.new
+    render :show
   def new
     @user = User.new
   end
@@ -13,6 +16,11 @@ class UsersController < ApplicationController
       @errors = @user.errors.full_messages
       render :new
     end
+  end
+
+  def show
+    @user = User.new
+    render :show
   end
 
   private
