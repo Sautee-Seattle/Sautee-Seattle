@@ -1,7 +1,6 @@
 .personal-bio {
   display: grid;
   grid-template-columns: 40% 60%;
-  width: 60%;
 }
 
 .personal-bio .text {
@@ -12,6 +11,9 @@
 }
 
 .personal-bio img {
+  border-radius: 150px;
+  width: 250px;
+  height: 250px;
   grid-column: 1;
 }
 
@@ -38,10 +40,4 @@
 
 .personal-content p {
   grid-column: 2;
-}
-
-.bio-img {
-  border-radius: 150px;
-  width: 250px;
-  height: 250px;
 }
