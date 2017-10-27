@@ -1,12 +1,13 @@
 .personal-bio {
   display: grid;
   grid-template-columns: 40% 60%;
-  border: medium black solid;
-  padding: 10px;
   width: 60%;
 }
 
 .personal-bio .text {
+  border: medium black solid;
+  padding-left: 10px;
+  padding-right: 5px;
   grid-column: 2;
 }
 
