@@ -24,6 +24,17 @@ require 'rspec/rails'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+
+    with.library :rails
+  end
+end
+
+
 ActiveRecord::Migration.maintain_test_schema!
 DatabaseCleaner.strategy = :truncation
 
