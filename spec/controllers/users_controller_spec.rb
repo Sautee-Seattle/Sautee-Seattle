@@ -6,8 +6,8 @@ RSpec.describe UsersController, type: :controller do
     it "returns 200" do
       expect(response).to be_ok
     end
-    it "TEMPORARY - assigns a user instance variable with 5 posts" do
-      expect(assigns[:user].posts.length).to eq(5)
+    it "assigns a user instance variable" do
+      expect(assigns[:user].kind_of?(User)).to eq true
     end
   end
 end
