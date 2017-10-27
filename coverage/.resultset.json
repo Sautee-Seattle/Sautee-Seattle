@@ -1,7 +1,38 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/helpers/application_helper.rb": [
+      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/controllers/users_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/controllers/application_controller.rb": [
+        1,
         1,
         null
       ],
@@ -11,40 +42,8 @@
         1,
         1,
         null
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1509138368
+    "timestamp": 1509145981
   }
 }
