@@ -1,0 +1,2 @@
+class IngredientsPost < ApplicationRecord
+end
