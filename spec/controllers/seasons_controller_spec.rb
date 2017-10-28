@@ -51,6 +51,4 @@ RSpec.describe SeasonsController, type: :controller do
       expect(response).to render_template :show
     end
   end
-
-
 end
