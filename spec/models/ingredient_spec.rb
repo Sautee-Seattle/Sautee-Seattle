@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Ingredient, type: :model do
-  let!(:ingredient) {create(:ingredient_with_recipes_and_locations, name: "Squash")}
+  let!(:ingredient) { create(:ingredient_with_recipes_and_locations, name: "Squash") }
 
   describe "associations" do
     it { should have_many(:posts) }
