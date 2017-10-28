@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: "seasons#index"
   resources :templates
+  resources :users, only: [:new]
   get '/users/:id', to: 'users#show'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
