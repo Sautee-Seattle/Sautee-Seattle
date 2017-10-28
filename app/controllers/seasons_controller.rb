@@ -4,8 +4,7 @@ class SeasonsController < ApplicationController
   end
 
   def show
-    # @season = Season.find_by(name: "Spring")
-    @season = Season.find(2)
+    @season = Season.find_by_name(params[:id])
   end
 
 end
