@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe IngredientsController, type: :controller do
   describe "#show" do
-    let(:ingredient) { create(:ingredient) }
+    let(:ingredient) { create(:ingredient_with_posts) }
     before(:each) { get :show, params: {id: ingredient.id} }
 
     it "returns 200" do
