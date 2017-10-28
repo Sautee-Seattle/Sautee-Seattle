@@ -1,10 +1,24 @@
 # user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
-# Selenium::WebDriver::Chrome.driver_path = <path to chromedriver> 
+# Selenium::WebDriver::Chrome.driver_path = <path to chromedriver>
 
 driver = Selenium::WebDriver.for :chrome
-
 driver.navigate.to "http://www.simplesteps.org/eat-local/state/washington"
+wait = Selenium::WebDriver::Wait.new(:timeout => 20)
+
+produce = {}
+
+all_online_seasons = wait.until {
+  element_1 = driver.find_element(:class, 'state-produce')
+  element_1.find_elements(:tag_name, 'h3')
+}
+
+all_online_seasons.each do |season|
+  produce[season.text] = []
+end
+
+puts produce
+
 
 # all_seasons = []
 # all_seasons << Season.create!(name: "Winter")
