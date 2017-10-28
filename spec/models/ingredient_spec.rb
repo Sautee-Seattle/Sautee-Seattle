@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Ingredient, type: :model do
-<<<<<<< HEAD
+  let!(:ingredient) {create(:ingredient_with_recipes_and_locations, name: "Squash")}
+
   describe "associations" do
     it { should have_many(:posts) }
   end
 
   describe "virtual attributes" do
-    let(:ingredient) { create(:ingredient_with_recipes_and_locations) }
     it "#recipes should return all posts of type 'recipe'" do
       all_recipes = Ingredient.find(ingredient.id).posts.select {|post| post.post_type == "recipe"}
       expect(ingredient.recipes).to eq(all_recipes)
@@ -17,8 +17,6 @@ RSpec.describe Ingredient, type: :model do
       expect(ingredient.locations).to eq(all_locations)
     end
   end
-=======
-  let!(:ingredient) {Ingredient.create!(name: "Squash")}
 
   context "Attributes" do
     it "has a name" do
@@ -32,6 +30,4 @@ RSpec.describe Ingredient, type: :model do
       expect(ingredient).to_not be_valid
     end
   end
-
->>>>>>> master
 end
