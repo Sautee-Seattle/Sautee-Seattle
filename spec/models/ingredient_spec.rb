@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Ingredient, type: :model do
+<<<<<<< HEAD
   describe "associations" do
     it { should have_many(:posts) }
   end
@@ -16,4 +17,21 @@ RSpec.describe Ingredient, type: :model do
       expect(ingredient.locations).to eq(all_locations)
     end
   end
+=======
+  let!(:ingredient) {Ingredient.create!(name: "Squash")}
+
+  context "Attributes" do
+    it "has a name" do
+      expect(ingredient.name).to eq "Squash"
+    end
+    it "is valid if name is provided" do
+      expect(ingredient.valid?).to eq true
+    end
+    it "is invalid if name is not provided" do
+      ingredient.name = nil
+      expect(ingredient).to_not be_valid
+    end
+  end
+
+>>>>>>> master
 end
