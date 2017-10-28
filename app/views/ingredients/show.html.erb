@@ -1,15 +1,10 @@
 <section id="ingredient-show">
-  <article class="left-content">
-    <img src="http://via.placeholder.com/250x200" alt="">
+  <article class="">
+    <aside class="left-content">
+      <img src="http://via.placeholder.com/250x200" alt="">
+    </aside>
 
-    <div class="produce-info">
-      <h2><%= @ingredient.name %></h2>
-      <p><%= @ingredient.description %></p>
-    </div>
-  </article>
-
-  <article class="right-content">
-    <aside class="locations">
+    <aside class="right-content locations">
       <h3>Where You Find It:</h3>
       <ul>
         <% @ingredient.locations.each do |location| %>
@@ -18,7 +13,15 @@
       </ul>
     </aside>
 
-    <div class="recipes">
+  </article>
+
+  <article class="">
+    <aside class="left-content produce-info">
+      <h2><%= @ingredient.name %></h2>
+      <p><%= @ingredient.description %></p>
+    </aside>
+
+    <aside class="right-content recipes">
       <h3>Recipes</h3>
       <ul>
         <% @ingredient.recipes.each do |recipe| %>
@@ -28,6 +31,6 @@
           </li>
         <% end %>
       </ul>
-    </div>
+    </aside>
   </article>
 </section>

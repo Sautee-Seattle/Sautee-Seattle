@@ -15,10 +15,6 @@
   border: medium black solid;
 }
 
-#ingredient-show .recipes {
-  margin-top: calc(100% - 210px);
-}
-
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #ingredient-show .left-content, #ingredient-show .right-content {
     width: 100%;
