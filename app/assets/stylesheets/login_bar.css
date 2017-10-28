@@ -1,21 +1,46 @@
-.login-nav{
-  height: 50px;
-  border: medium black solid;
+header {
+  --main-link-color: white;
+  --main-nav-bg-color: #343a40;
+  --main-nav-li-hover-bg-color: black;
+}
+header{
+  line-height: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr
+}
+header ul{
+  display: grid;
+  list-style:none;
+}
+header li{
+  grid-row: 1;
+}
+header a{
+  text-decoration: none;
+  color: var(--main-link-color);
+}
+header h1{
+  margin: 0;
+}
+header h1 span{
+  color: lime;
 }
 
-.login-nav ul {
-  grid-column: 4;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  list-style: none;
+.welcome header {
+  background-color: transparent;
 }
 
-.login-nav li {
-  text-align: center;
-  display: inline-block;
-  width: 70%;
-  border: medium black solid;
+header {
+  background-color: var(--main-nav-li-hover-bg-color);
+}
+nav.seasons{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.welcome{
+  width: 100%;
+  height: 100vh;
+  background: url("main-wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
