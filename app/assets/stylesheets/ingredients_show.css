@@ -1,0 +1,20 @@
+.logo {
+  border-radius: 150px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#ingredient-show ul {
+  list-style: none;
+}
+
+#ingredient-show li {
+  margin-left: 0px;
+}
+
+#ingredient-show .locations {
+  border: medium black solid;
+  width: 50%;
+  padding-left: 10px;
+  padding-top: 10px;
+}
