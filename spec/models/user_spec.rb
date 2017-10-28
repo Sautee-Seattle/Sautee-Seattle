@@ -9,6 +9,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of(:email) }
     it { should have_secure_password }
     it { should allow_value(nil).for(:bio) }
+    it { should have_many(:posts)}
 
     it "email is unique" do
       user2.username = 'greg'
