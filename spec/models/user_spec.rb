@@ -9,16 +9,11 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of(:email) }
     it { should have_secure_password }
     it { should allow_value(nil).for(:bio) }
+    it { should validate_uniqueness_of(:username) }
+    it { should validate_uniqueness_of(:email) }
+  end
+
+  describe "associations" do
     it { should have_many(:posts)}
-
-    it "email is unique" do
-      user2.username = 'greg'
-      expect(user2.valid?).to be false
-    end
-
-    it "username is unique" do
-      user2.email = 'greg'
-      expect(user2.valid?).to be false
-    end
   end
 end
