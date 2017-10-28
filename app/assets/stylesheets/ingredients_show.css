@@ -1,4 +1,4 @@
-.logo {
+.ingredient-show-logo {
   border-radius: 150px;
   position: absolute;
   margin-top: 20px;
@@ -14,15 +14,31 @@
   margin-left: 0px;
 }
 
+#ingredient-show .recipes {
+  margin-top: 50px;
+}
+
+#ingredient-show .recipes p {
+  margin-top: 0px;
+}
+
 #ingredient-show .locations {
   border: medium black solid;
-  width: 50%;
+  width: 60%;
   padding: 10px 0px 10px 10px;
   margin-top: 50px;
 }
 
 @media (max-width: 1123px) {
-  .logo {
+  .ingredient-show-logo {
     position: relative;
+  }
+
+  #ingredient-show .left-content {
+    width: 100%;
+  }
+
+  #ingredient-show .right-content {
+    width: 100%;
   }
 }
