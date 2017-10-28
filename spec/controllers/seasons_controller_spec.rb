@@ -5,8 +5,8 @@ RSpec.describe SeasonsController, type: :controller do
 
   context "seasons#show" do
     it "renders Fall CSS if successful" do
-      get :show, params: {name: "Fall"}
-      expect(page.body).to include("seasons-show-Fall")
+      get :show
+      expect(response).to include("seasons-show")
     end
   end
 
