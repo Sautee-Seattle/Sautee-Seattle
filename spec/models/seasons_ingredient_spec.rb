@@ -13,11 +13,12 @@ RSpec.describe SeasonsIngredient, type: :model do
         it "Ingredients are added properly to SeasonsIngredient" do
             expect(SeasonsIngredient.first.ingredient).to eq ingredient
         end
-
-        xit "should have followers" do
-          @thing.followers.should == [@user]
+        it "Seasons have many Ingredients" do
+          expect(season.ingredients.first.name).to eq "Potato"
         end
-
+        it "Ingredients have many Seasons" do
+          expect(ingredient.seasons.first.name).to eq "Fall"
+        end
     end
 
 end
