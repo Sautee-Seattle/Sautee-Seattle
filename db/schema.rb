@@ -15,6 +15,12 @@ ActiveRecord::Schema.define(version: 20171028001933) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "type"
     t.string "title"
@@ -29,6 +35,15 @@ ActiveRecord::Schema.define(version: 20171028001933) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "seasons_ingredients", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
+    t.bigint "season_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_id"], name: "index_seasons_ingredients_on_ingredient_id"
+    t.index ["season_id"], name: "index_seasons_ingredients_on_season_id"
   end
 
   create_table "users", force: :cascade do |t|
