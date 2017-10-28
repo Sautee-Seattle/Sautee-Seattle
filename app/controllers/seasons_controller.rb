@@ -5,7 +5,7 @@ class SeasonsController < ApplicationController
 
   def show
     # @season = Season.find_by(name: "Spring")
-    @season = Season.find(1)
+    @season = Season.find(2)
   end
 
 end
