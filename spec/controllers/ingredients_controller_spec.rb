@@ -9,6 +9,10 @@ RSpec.describe IngredientsController, type: :controller do
       expect(response).to be_ok
     end
 
+    it "assigns an ingredient instance variable" do
+      expect(assigns[:ingredient].kind_of?(Ingredient)).to eq(true)
+    end
+
     it "assigns a locations instance variable to an array" do
       expect(assigns[:locations].kind_of?(Array)).to eq(true)
     end
