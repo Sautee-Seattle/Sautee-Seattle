@@ -1,37 +1,37 @@
 user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
-Season.create!(name: "Winter")
-Season.create!(name: "Spring")
-Season.create!(name: "Summer")
-Season.create!(name: "Fall")
+seasons = []
+seasons << Season.create!(name: "Winter")
+seasons << Season.create!(name: "Spring")
+seasons << Season.create!(name: "Summer")
+seasons << Season.create!(name: "Fall")
 
 apple = Ingredient.create!(name: "Apple")
-apple.seasons << Season.find(1)
-apple.seasons << Season.find(2)
-apple.seasons << Season.find(3)
-apple.seasons << Season.find(4)
+  seasons.each do |season|
+    apple.seasons << season
+  end
 
 avocado = Ingredient.create!(name: "Avocado")
-avocado.seasons << Season.find(1)
-avocado.seasons << Season.find(2)
-avocado.seasons << Season.find(3)
+  avocado.each do |season|
+    apple.seasons << season
+  end
 
 banana = Ingredient.create!(name: "Banana")
-banana.seasons << Season.find(1)
-banana.seasons << Season.find(2)
-banana.seasons << Season.find(3)
+  seasons.each do |season|
+    banana.seasons << season
+  end
 
 beets = Ingredient.create!(name: "Beets") # Nicks Fav!
-beets.seasons << Season.find(1)
-beets.seasons << Season.find(3)
-beets.seasons << Season.find(4)
+  seasons.each do |season|
+    beets.seasons << season
+  end
 
 celery = Ingredient.create!(name: "Celery")
-celery.seasons << Season.find(1)
-celery.seasons << Season.find(2)
-celery.seasons << Season.find(3)
-celery.seasons << Season.find(4)
+  seasons.each do |season|
+    celery.seasons << season
+  end
 
 mushrooms = Ingredient.create!(name: "Mushrooms")
-mushrooms.seasons << Season.find(2)
-mushrooms.seasons << Season.find(4)
+  seasons.each do |season|
+    mushrooms.seasons << season
+  end
