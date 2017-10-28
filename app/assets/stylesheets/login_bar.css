@@ -17,13 +17,21 @@ header li{
 }
 header a{
   text-decoration: none;
-  color: white;
+  color: var(--main-link-color);
 }
 header h1{
   margin: 0;
 }
 header h1 span{
   color: lime;
+}
+
+.welcome header {
+  background-color: transparent;
+}
+
+header {
+  background-color: var(--main-nav-li-hover-bg-color);
 }
 nav.seasons{
   margin: 0 auto;
