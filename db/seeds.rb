@@ -10,8 +10,6 @@ apple.seasons << Season.find(1)
 apple.seasons << Season.find(2)
 apple.seasons << Season.find(3)
 apple.seasons << Season.find(4)
-p Season.find(4).ingredients
-p apple.seasons
 
 avocado = Ingredient.create!(name: "Avocado")
 avocado.seasons << Season.find(1)
