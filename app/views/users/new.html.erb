@@ -1,11 +1,15 @@
 <section id="users-new">
-  <%= render 'shared/errors' %>
 
-  <%= form_for @user, html: { id: 'new-user-form', class: 'form' } do |f| %>
-    <%= f.text_field :username, required: true, placeholder: 'Name' %>
-    <%= f.email_field :email, required: true, placeholder: 'Email' %>
-    <%= f.password_field :password, required: true, placeholder: 'Password' %>
-    <%= f.text_area :bio, placeholder: 'Bio' %>
-    <%= f.submit 'Register' %>
-  <% end %>
+  <article id="new-user-form">
+    <h1>Create an Account!</h1>
+    <%= render 'shared/errors' %>
+
+    <%= form_for @user, html: { class: 'form' } do |f| %>
+      <%= f.text_field :username, required: true, placeholder: 'Name' %>
+      <%= f.email_field :email, required: true, placeholder: 'Email' %>
+      <%= f.password_field :password, required: true, placeholder: 'Password' %>
+      <%= f.text_area :bio, placeholder: 'Bio' %>
+      <%= f.submit 'Register' %>
+    <% end %>
+  </article>
 </section>

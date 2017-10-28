@@ -1,0 +1,17 @@
+#new-user-form input {
+  display: inline-block;
+}
+
+#new-user-form textarea {
+  display: block;
+  width: 390px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 1.25em;
+}
+
+#new-user-form {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
