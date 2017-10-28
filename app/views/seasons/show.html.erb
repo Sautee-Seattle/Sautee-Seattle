@@ -1,6 +1,5 @@
 <section class="seasons-show-<%= @season.name %>">
   <div class="current-season-spring">
-
     </div>
     <div class="seasons-show-header">
       <h3>Sautee Seattle - Seasonal Produce</h3>
@@ -8,9 +7,10 @@
       <h4>This Seasons Produce!</h4>
     </div>
 
-    <div class="seasons-show-produce">
-      
+    <div class="season-ingredient-partial-grid">
+      <% @season.ingredients.each do |ingredient| %>
+        <%= render partial: "season_ingredient", locals: {ingredient: ingredient} %>
+      <% end %>
     </div>
-
   </div>
 </section>

@@ -25,11 +25,20 @@
 }
 /* END Season Winter */
 
-.seasons-show-produce {
+
+/* START Partial _Season_Ingredient */
+.season-ingredient-partial-grid {
   display: grid;
-  grid-template-columns: repeat(1fr);
-  grid-template-areas:
-  "header  header  header"
-  "left middle right"
-  "footer  footer  footer";
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  padding: 25px;
+  border: 3px solid green;
 }
+
+.season-ingredient-partial-cell {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 3px solid blue;
+}
+/* END Partial _Season_Ingredient */

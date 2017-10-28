@@ -4,8 +4,8 @@ class SeasonsController < ApplicationController
   end
 
   def show
-    @season = Season.create!(name: "Spring")
-    render :show
+    # @season = Season.find_by(name: "Spring")
+    @season = Season.find(1)
   end
 
 end
