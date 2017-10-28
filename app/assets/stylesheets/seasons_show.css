@@ -33,14 +33,14 @@
 /* START Partial _Season_Ingredient */
 .season-ingredient-partial-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
-  padding: 25px;
   border: 3px solid green;
+  list-style-type: none;
 }
 
 .season-ingredient-partial-cell {
-  padding: 10px;
+  margin: 0;
   text-align: center;
   vertical-align: middle;
   border: 3px solid blue;

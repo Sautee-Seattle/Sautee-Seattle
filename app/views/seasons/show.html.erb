@@ -1,4 +1,3 @@
-<main>
 
     <section class="seasons-show-<%= @season.name %>">
 
@@ -8,12 +7,12 @@
           <h4>This Seasons Produce!</h4>
         </div>
 
-        <div class="season-ingredient-partial-grid">
-          <% @season.ingredients.each do |ingredient| %>
-            <%= render partial: "season_ingredient", locals: {ingredient: ingredient} %>
-          <% end %>
+        <div>
+            <ul class="season-ingredient-partial-grid">
+                <% @season.ingredients.each do |ingredient| %>
+                <%= render partial: "season_ingredient", locals: {ingredient: ingredient} %>
+                <% end %>
+            </ul>
         </div>
 
     </section>
-
-</main>
