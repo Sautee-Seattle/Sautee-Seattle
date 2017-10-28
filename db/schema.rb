@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20171028185308) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "type"
+    t.string "post_type"
     t.string "title"
     t.text "body"
     t.bigint "user_id"

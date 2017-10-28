@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe IngredientsController, type: :controller do
   describe "#show" do
-    let(:ingredient) { create(:ingredient_with_posts) }
+    let(:ingredient) { create(:ingredient_with_recipes_and_locations) }
     before(:each) { get :show, params: {id: ingredient.id} }
 
     it "returns 200" do
@@ -14,11 +14,13 @@ RSpec.describe IngredientsController, type: :controller do
     end
 
     it "assigns a locations instance variable to an array" do
-      expect(assigns[:locations].kind_of?(Array)).to eq(true)
+      locations = ingredient.posts.select {|post| post.post_type == "location"}
+      expect(assigns[:locations]).to match_array(locations)
     end
 
     it "assings a recipes instance variable to an array" do
-      expect(assigns[:recipes].kind_of?(Array)).to eq(true)
+      recipes = ingredient.posts.select {|post| post.post_type == "recipe"}
+      expect(assigns[:recipes]).to match_array(recipes)
     end
   end
 end
