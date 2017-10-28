@@ -1,10 +1,10 @@
 <nav class="login-nav">
   <ul>
     <% unless session[:user_id] %>
-      <li>Login</li>
-      <li>Register</li>
+      <li><%= link_to "login", login_path %></li>
+      <li> <%= link_to "register", new_user_path %> </li>
     <% else %>
-      <li>Logout</li>
+      <li> <%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete %></li>
     <% end %>
   </ul>
 </nav>
