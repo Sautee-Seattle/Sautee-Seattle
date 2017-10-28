@@ -10,17 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171027191000) do
-=======
 ActiveRecord::Schema.define(version: 20171028001933) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
   create_table "posts", force: :cascade do |t|
     t.string "type"
     t.string "title"
@@ -31,7 +25,6 @@ ActiveRecord::Schema.define(version: 20171028001933) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
->>>>>>> master
   create_table "seasons", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
