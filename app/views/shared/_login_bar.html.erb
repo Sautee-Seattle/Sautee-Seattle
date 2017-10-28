@@ -1,10 +1,21 @@
-<nav class="login-nav">
-  <ul>
-    <% unless session[:user_id] %>
+<header>
+  <h1><a href="/">Seattle <span>Sautee</span></a></h1>
+  <nav class="seasons">
+    <ul>
+      <li><a href="/seasons/spring">Spring</a></li>
+      <li><a href="/seasons/summer">Summer</a></li>
+      <li><a href="/seasons/fall">Fall</a></li>
+      <li><a href="/seasons/winter">Winter</a></li>
+    </ul>
+  </nav>
+  <nav class="login-nav">
+    <ul>
+      <% unless session[:user_id] %>
       <li><%= link_to "login", login_path %></li>
-      <li> <%= link_to "register", new_user_path %> </li>
-    <% else %>
-      <li> <%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete %></li>
-    <% end %>
-  </ul>
-</nav>
+      <li><%= link_to "register", new_user_path %></li>
+      <% else %>
+      <li><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

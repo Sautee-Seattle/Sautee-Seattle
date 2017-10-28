@@ -1,47 +1,8 @@
 div.seasons-main {
-  --main-link-color: white;
   --main-body-color: white;
-  --main-nav-bg-color: #343a40;
-  --main-nav-li-hover-bg-color: black;
 }
-div.seasons-main{
-  width: 100%;
-  height: 100vh;
-  background: url("main-wallpaper.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-nav.seasons{
-  padding-top: 100px;
-  margin: 0 auto;
-  line-height: 30px;
-  width: 60%;
-}
-nav.seasons ul {
-  padding: 0;
-  text-align: center;
-  display: grid;
-  list-style: none;
-}
-nav.seasons li {
-  background: var(--main-nav-bg-color);
-  margin: 0;
-  grid-row: 1;
-}
-nav.seasons ul > li:first-of-type{
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-nav.seasons ul > li:last-of-type{
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-nav.seasons a {
-  text-decoration: none;
-  color: var(--main-link-color);
-}
-nav.seasons li:hover {
-  background: var(--main-nav-li-hover-bg-color);
-}
+
+
 main.home-page{
   color: var(--main-body-color);
   margin: 0 auto;
