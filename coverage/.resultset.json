@@ -4,15 +4,15 @@
       "/Users/apprentice/GOLDENSASQUATCHES/sautee-seattle/Sautee-Seattle/app/controllers/users_controller.rb": [
         1,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        7,
+        10,
         null,
-        7,
-        5,
-        5,
+        10,
+        8,
+        8,
         null,
         2,
         2,
@@ -27,7 +27,7 @@
         1,
         null,
         1,
-        7,
+        10,
         null,
         null
       ],
@@ -44,6 +44,6 @@
         null
       ]
     },
-    "timestamp": 1509149108
+    "timestamp": 1509149998
   }
 }

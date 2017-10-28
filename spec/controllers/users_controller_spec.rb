@@ -22,6 +22,10 @@ RSpec.describe UsersController, type: :controller do
     end
 
     context "user is valid" do
+      it "creates a user in the database" do
+        expect{ post :create, params: { user: FactoryBot.attributes_for(:user) } }.to change(User, :count).by 1
+      end
+
       it "logs user in" do
         expect(session[:user_id]).to eq User.all.last.id
       end
@@ -42,6 +46,13 @@ RSpec.describe UsersController, type: :controller do
         post :create, params: { user: { username: 'blueberry', email: 'email', password: 'pw', bio: 'lalala' } }
 
         expect(response).to render_template :new
+      end
+    end
+
+    describe "#new" do
+      it "creates a #user" do
+        get :new
+        expect(assigns[:user]).to be_a User
       end
     end
   end
