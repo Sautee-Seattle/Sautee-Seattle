@@ -10,12 +10,18 @@
     }
   }
 
-  .left-content img {
-    border-radius: 50%;
+  .top {
+    .left-content img {
+      border-radius: 50%;
+    }
   }
 
-  .locations {
-    border: medium black solid;
+  .see-more {
+    a {
+      color: black;
+      text-decoration: none;
+      padding: 2px;
+    }
   }
 
   .produce-info {
