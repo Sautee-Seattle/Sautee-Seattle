@@ -15,10 +15,12 @@ class Post < ApplicationRecord
   end
 
   before_validation do
-    if is_recipe?
-      self.url = "pan.png"
-    else
-      self.url = "#"
+    if !self.url || self.url == ""
+      if is_recipe?
+        self.url = "pan.png"
+      else
+        self.url = "#"
+      end
     end
   end
 end

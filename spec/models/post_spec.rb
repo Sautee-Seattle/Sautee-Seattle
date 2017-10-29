@@ -19,6 +19,17 @@ RSpec.describe Post, type: :model do
       post = create(:post, post_type: "recipe")
       expect(post.url).to eq("pan.png")
     end
+
+    it "should default url if url is set to empty string" do
+      post = create(:post, post_type: 'recipe', url: "")
+      expect(post.url).to eq("pan.png")
+    end
+
+    it "should not change url if it has been explicitly delcared" do
+      url = "flimflam.png"
+      post = create(:post, post_type: "recipe", url: url)
+      expect(post.url).to eq(url)
+    end
   end
 
   describe "associations" do
