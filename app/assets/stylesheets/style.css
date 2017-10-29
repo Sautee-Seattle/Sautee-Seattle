@@ -1,5 +1,16 @@
-/* css document */
-/* general styles */
+/* css document */ /* general styles */
+
+/* color palette */
+:root {
+  --green: #39b54a;
+  --lalala: #1a1a1a;
+  --summer: #8cc63f;
+  --spring: #dc1e79;
+  --winter: #29abe2;
+  --fall: #f15a24;s
+}
+
+
 body, body * {
   padding: 0;
   margin: 0;
@@ -7,6 +18,8 @@ body, body * {
 
 body {
   line-height: 1.5em;
+  box-sizing: border-box;
+  border: 25px solid #fff;
 }
 
 main, section, article, div, header, footer aside {
@@ -15,6 +28,8 @@ main, section, article, div, header, footer aside {
 
 main {
   width: 100%;
+  background-color: var(--lalala);
+  height: 100vh;
 }
 
 section {
