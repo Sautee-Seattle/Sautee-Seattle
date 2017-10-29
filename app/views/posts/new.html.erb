@@ -1,0 +1,16 @@
+<section>
+  <%= form_for @post do |f| %>
+    <%= render "shared/errors", object: @post %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <% @ingredients.each do |ing| %>
+      <%= ing.name %>
+      <input type="checkbox" name="ingredients[<%= ing.name %>]" value="<%= ing.name %>" id="<%= ing.name %>">
+      <label for="<%= ing.name %>"><%= ing.name %></label>
+    <% end %>
+    <%= f.submit %>
+
+  <% end %>
+</section>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :seasons , only: [:index, :show]
   resources :ingredients, only: [:show]
+  resources :posts, only: [:new, :create, :show]
 
   resources :templates
 
