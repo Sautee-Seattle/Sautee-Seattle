@@ -12,7 +12,7 @@
         <% end %>
       </ul>
       <span class="see-more">
-        <%= link_to "See More", "#" %>
+        <%= link_to "More places to go...", "#" %>
       </span>
     </aside>
   </article>
@@ -29,13 +29,12 @@
       <ul>
         <% @ingredient.recipes.each do |recipe| %>
           <li>
-            <h5><%= recipe.title %></h5>
-            <p><%= recipe.body[0..20] %>...</p>
+            <h3><%= recipe.title %></h3>
           </li>
         <% end %>
       </ul>
       <span class="see-more">
-        <%= link_to "See More", "#" %>
+        <%= link_to "More recipes...", "#" %>
       </span>
     </aside>
   </article>
