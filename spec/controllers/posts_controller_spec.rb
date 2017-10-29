@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
   let(:ingredient) {create(:ingredient)}
+  let(:user) { create(:user) }
   describe "#location" do
     before(:each) { get :location, params: { ingredient_id: ingredient.id} }
     it "renders a location page" do
@@ -11,9 +12,9 @@ RSpec.describe PostsController, type: :controller do
 
   describe "create location" do
     describe "valid input" do
+      let(:new_post) { {post_type: 'location', title: 'Wenistown', body: "444 Wenis Way"} }
       before(:each) do
-        new_post = {post_type: 'location', title: 'Wenistown', body: "444 Wenis Way"}
-        post :create, params: { ingredient_id: ingredient.id, post: new_post }
+        post :create, params: { ingredient_id: ingredient.id, post: new_post }, session: { user_id: user.id }
       end
 
       it "redirects to ingredient#show" do
@@ -30,7 +31,7 @@ RSpec.describe PostsController, type: :controller do
         # Should fail uniqueness validator for title
         old_post = create(:location_with_ingredients)
         bad_post = {post_type: 'location', title: old_post.title, body: "444 Wenis Way"}
-        post :create, params: { ingredient_id: ingredient.id, post: bad_post }
+        post :create, params: { ingredient_id: ingredient.id, post: bad_post }, session: { user_id: user.id }
       end
 
       it "renders new location form" do
