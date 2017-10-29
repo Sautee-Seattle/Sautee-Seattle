@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :templates
+  # resources :templates
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
