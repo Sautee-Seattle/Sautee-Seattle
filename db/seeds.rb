@@ -18,8 +18,8 @@ def associate_produce(produce_data, season)
   end
 end
 
+# imports produce data from JSON file
 file = File.read('db/produce_data.json')
-
 produce_data = JSON.parse(file)
 
 while Season.all.length < 4
@@ -52,5 +52,4 @@ while Season.all.length < 4
 end
 ################################################################################################################################################################
 
-
-# user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')

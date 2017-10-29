@@ -7,7 +7,7 @@ wait = Selenium::WebDriver::Wait.new(:timeout => 20)
 
 produce_data = {}
 
-# gets all seasons online
+# gets all season's data online
 seasons = wait.until {
   element_1 = driver.find_element(:class, 'state-produce')
   element_1.find_elements(:class, 'season')
