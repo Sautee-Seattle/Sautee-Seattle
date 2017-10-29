@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Season, type: :model do
-  let!(:season) {Season.create!(name: "Fall")}
+  let!(:season) {create(:season, name: "Fall")}
 
   context "Attributes" do
     it "has a name" do

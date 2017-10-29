@@ -2,16 +2,16 @@
     <section class="seasons-show-<%= @season.name %>">
 
         <div class="seasons-show-header">
-          <h3>Sautee Seattle - Seasonal Produce</h3>
           <h1><%= @season.name %></h1>
-          <h4>This Seasons Produce!</h4>
+          <p>This site is dedicated to making sure we get the message out: Nick just absolutely loves Beets! Can't get enough of em! Every day he just says "Beets! Beets! I need my Beets!", so we play some music and it just pisses him off to no end. But seriously, Nick loves Beets.</p>
+          <h2>Whats on the Menu?</h2>
         </div>
 
         <div>
             <ul class="season-ingredient-partial-grid">
-                <% @season.ingredients.each do |ingredient| %>
+              <% @season.ingredients.each do |ingredient| %>
                 <%= render partial: "season_ingredient", locals: {ingredient: ingredient} %>
-                <% end %>
+              <% end %>
             </ul>
         </div>
 
