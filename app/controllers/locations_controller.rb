@@ -1,6 +1,8 @@
 class LocationsController < ApplicationController
 
   def index
+    @ingredient = Ingredient.find(params[:ingredient_id])
+    render :index
   end
 
   def new

@@ -73,3 +73,13 @@ while Season.all.length < 4 do
 
   driver.quit
 end
+  ###############################################################################
+User.create(username: "b", email: Faker::Internet.email, password: "b", bio: Faker::Lorem.paragraph)
+
+10.times do
+  User.create(username: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password, bio: Faker::Lorem.paragraph)
+end
+
+20.times do
+  Post.create(post_type: "location", title: Faker::Food.spice, body: Faker::Lorem.paragraph, user: User.all.sample)
+end
