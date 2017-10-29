@@ -14,7 +14,7 @@ end
 
 def associate_produce(produce_data, season)
   produce_data.each do |name|
-    season.ingredients << Ingredient.find_by_name(name)
+    season.ingredients << Ingredient.find_by!(name: name)
   end
 end
 
@@ -34,7 +34,7 @@ while Season.all.length < 4
   clean(ingredients)
 
   ingredients.each do |ingredient|
-    Ingredient.create(name: ingredient)
+    Ingredient.create!(name: ingredient)
   end
   #############################################################################
 
