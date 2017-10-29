@@ -16,11 +16,11 @@ end
 
 def associate_produce(produce_data, season)
   produce_data.each do |name|
-    season.ingredients << Ingredient.find_by_name(name)
+    season.ingredients << Ingredient.find_by!(name: name)
   end
 end
 
-while Season.all.length < 4
+while Season.all.length < 4 do
   driver = Selenium::WebDriver.for :chrome
   driver.navigate.to "http://www.simplesteps.org/eat-local/state/washington"
   wait = Selenium::WebDriver::Wait.new(:timeout => 20)
@@ -55,7 +55,7 @@ while Season.all.length < 4
   clean(ingredients)
 
   ingredients.each do |ingredient|
-    Ingredient.create(name: ingredient)
+    Ingredient.create!(name: ingredient)
   end
   ###############################################################################
 
@@ -71,7 +71,5 @@ while Season.all.length < 4
   associate_produce(summer_produce_data, summer)
   associate_produce(fall_produce_data, fall)
 
-
   driver.quit
 end
-################################################################################################################################################################
