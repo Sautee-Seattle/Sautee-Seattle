@@ -8,14 +8,28 @@ wait = Selenium::WebDriver::Wait.new(:timeout => 20)
 
 produce = {}
 
-all_online_seasons = wait.until {
+# gets all seasons online
+seasons = wait.until {
   element_1 = driver.find_element(:class, 'state-produce')
-  element_1.find_elements(:tag_name, 'h3')
+  element_1.find_elements(:class, 'season')
 }
 
-all_online_seasons.each do |season|
-  produce[season.text] = []
+
+#sets season names to empty arrays in produce {}
+seasons.each do |season|
+  monthy = season.find_element(:tag_name, 'h3').text
+
+  season_produce = season.find_elements(:tag_name, 'a')
+
+  season_produce.map! { |item| item.text }
+
+  produce[monthy] = season_produce
 end
+
+# example = driver.find_element(:class, 'season').find_elements(:tag_name, 'a')
+
+# example.each { |pro| puts pro.text }
+
 
 puts produce
 
