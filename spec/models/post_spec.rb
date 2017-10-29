@@ -25,4 +25,16 @@ RSpec.describe Post, type: :model do
     it { should have_many(:ingredients) }
     it { should belong_to(:user) }
   end
+
+  describe "virtual attributes" do
+    it "is_location? should return true if post is location" do
+      location = create(:post, post_type: "location")
+      expect(location).to be_is_location
+    end
+
+    it "is_recipe? should return true if post is recipe" do
+      recipe = create(:post, post_type: "recipe")
+      expect(recipe).to be_is_recipe
+    end
+  end
 end
