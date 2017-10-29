@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def location
+    @ingredient = Ingredient.find(params[:ingredient_id])
     render :new_location
   end
 
