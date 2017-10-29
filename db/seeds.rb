@@ -53,3 +53,5 @@ end
 ################################################################################################################################################################
 
 user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+
+recipe = Post.create(post_type: 'recipe', title: 'beets on hams', body: 'put the beet on the ham and shake it all up! Nick says I approve :)', url: 'https://static.pexels.com/photos/161533/abstract-barbecue-barbeque-bbq-161533.jpeg', user: user);
