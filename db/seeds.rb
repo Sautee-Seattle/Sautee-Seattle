@@ -1,4 +1,4 @@
-user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+# user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
 ################################################################################################################################################################
 # DO NOT CHANGE THIS SECTION
@@ -20,7 +20,7 @@ def associate_produce(produce_data, season)
   end
 end
 
-while Season.all.length < 4
+# while Season.all.length < 4
   driver = Selenium::WebDriver.for :chrome
   driver.navigate.to "http://www.simplesteps.org/eat-local/state/washington"
   wait = Selenium::WebDriver::Wait.new(:timeout => 20)
@@ -44,7 +44,13 @@ while Season.all.length < 4
     produce_data[monthy] = season_produce
   end
 
-  ###############################################################################
+  #-------------------------------------------------
+  # File.open('./produce_data.json', 'w') do |file|
+  #   file.write JSON.pretty_generate(produce_data)
+  # end
+  #-------------------------------------------------
+
+  ##############################################################################
   # SEEDS seasons & ingredients
   winter = Season.create(name: 'Winter')
   spring = Season.create(name: 'Spring')
@@ -57,7 +63,7 @@ while Season.all.length < 4
   ingredients.each do |ingredient|
     Ingredient.create(name: ingredient)
   end
-  ###############################################################################
+  ##############################################################################
 
   # gets unique produce for our 4 seasons (as opposed to bi-monthly setup online)
   winter_produce_data = get_season_produce(produce_data, 0, 1, 2, 3, 22, 23)
@@ -73,5 +79,5 @@ while Season.all.length < 4
 
 
   driver.quit
-end
+# end
 ################################################################################################################################################################
