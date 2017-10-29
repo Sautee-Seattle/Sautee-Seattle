@@ -4,4 +4,5 @@ class Post < ApplicationRecord
   belongs_to :user
 
   validates :post_type, :title, :body, presence: true
+  validates :title, uniqueness: {scope: :post_type}
 end
