@@ -11,6 +11,9 @@
           <li><%= location.title %></li>
         <% end %>
       </ul>
+      <%= link_to location_new_ingredient_post_path(@ingredient) do %>
+        <div class="new-location-button"></div>
+      <% end %>
     </aside>
 
   </article>

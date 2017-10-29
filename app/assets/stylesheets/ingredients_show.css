@@ -15,6 +15,14 @@
   border: medium black solid;
 }
 
+#ingredient-show .new-location-button {
+  background: url("plus.svg") no-repeat center;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #ingredient-show .left-content, #ingredient-show .right-content {
     width: 100%;
