@@ -4,24 +4,15 @@
       <img src="http://via.placeholder.com/250x200" alt="">
     </aside>
 
-    <aside class="right-content locations">
-      <h3>Where You Find It:</h3>
-      <ul>
-        <% @ingredient.locations.each do |location| %>
-          <li><%= location.title %></li>
-        <% end %>
-      </ul>
+    <aside class="right-content produce-info">
+      <h2><%= @ingredient.name %></h2>
+      <p><%= @ingredient.description %></p>
     </aside>
 
   </article>
 
   <article class="">
-    <aside class="left-content produce-info">
-      <h2><%= @ingredient.name %></h2>
-      <p><%= @ingredient.description %></p>
-    </aside>
-
-    <aside class="right-content recipes">
+    <aside class="left-content produce-info recipes">
       <h3>Recipes</h3>
       <ul>
         <% @ingredient.recipes.each do |recipe| %>
@@ -29,6 +20,15 @@
             <h5><%= recipe.title %></h5>
             <p><%= recipe.body[0..20] %>...</p>
           </li>
+        <% end %>
+      </ul>
+    </aside>
+
+    <aside class="right-content locations">
+      <h3>Where You Find It:</h3>
+      <ul>
+        <% @ingredient.locations.each do |location| %>
+          <li><%= location.title %></li>
         <% end %>
       </ul>
     </aside>
