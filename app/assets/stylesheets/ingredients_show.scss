@@ -1,0 +1,43 @@
+#ingredient-show {
+  ul {
+    list-style: none;
+    margin-top: 10px;
+    li {
+      margin-left: 0px;
+      p {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .left-content img {
+    border-radius: 50%;
+  }
+
+  .locations {
+    border: medium black solid;
+  }
+
+  .produce-info {
+    h2 {
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin-top: 0px;
+    }
+  }
+
+  .new-location-button {
+    background: url('plus.svg');
+    height: 50px;
+    width: 50px;
+    float: right;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #ingredient-show .left-content, #ingredient-show .right-content {
+    width: 100%;
+  }
+}

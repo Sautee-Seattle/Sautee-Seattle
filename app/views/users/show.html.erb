@@ -1,12 +1,33 @@
 <section id="user-profile">
-  <aside class="personal-bio">
-    <img src="http://via.placeholder.com/250x250" alt="personal-bio" class="bio-img">
-    <div class="text">
+  <article class="top">
+    <aside class="left-content">
+      <img src="http://via.placeholder.com/250x250" alt="personal-bio" class="bio-img">
+    </aside>
+
+    <aside class="right-content">
       <h2><%= @user.username %></h2>
       <p>
         <%= @user.bio %>
       </p>
-    </div>
-  </aside>
-
+    </aside>
+  </article>
+  
+  <article class="bottom">
+    <aside class="left-content">
+      <h2>Recently Posted Locations</h2>
+      <ul>
+        <% @user.locations[0..5].each do |location| %>
+          <li><%= location.title %></li>
+        <% end %>
+      </ul>
+    </aside>
+    <aside class="right-content">
+      <h2>Recently Posted Recipes</h2>
+      <ul>
+        <% @user.recipes[0..5].each do |recipe| %>
+          <li><%= recipe.title %></li>
+        <% end %>
+      </ul>
+    </aside>
+  </article>
 </section>
