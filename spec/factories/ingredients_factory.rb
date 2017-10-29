@@ -2,13 +2,13 @@ FactoryBot.define do
   factory :ingredient do
     name 'covfefe'
 
-    factory :ingredient_with_posts do
+    factory :ingredient_with_recipes do
       transient do
         posts_count 5
       end
 
       after(:create) do |ingredient, evaluator|
-        create_list(:post, evaluator.posts_count, ingredients: [ingredient])
+        create_list(:post, evaluator.posts_count, ingredients: [ingredient], post_type: 'recipe')
       end
     end
 

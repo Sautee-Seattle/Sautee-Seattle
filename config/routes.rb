@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :locations, only: [:index]
     resources :posts, only: [:create, :show] do
       resources :locations, only: [:new, :create]
-      # get 'location', on: :new
     end
   end
 
