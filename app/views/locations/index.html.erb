@@ -4,7 +4,7 @@
   <div class="locations-index-all-locations">
       <h3><a href="#"><%= location.title %></a></h3>
       <p><%= location.body %></p>
-      <p>Posted by:<%= location.user.username %></p>
+      <p>Posted by: <%= link_to location.user.username, user_path(location.user) %></p>
   </div>
   <% end %>
 
