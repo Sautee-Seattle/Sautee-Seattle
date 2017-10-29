@@ -1,0 +1,18 @@
+#recipes-posts-index {
+  text-align: center;
+  .recipe-list {
+    text-align: left;
+    ul {
+      list-style: none;
+      li {
+        margin-left: 0px;
+        border: medium white solid;
+
+        &:hover {
+          border: medium green solid;
+          color: green;
+        }
+      }
+    }
+  }
+}
