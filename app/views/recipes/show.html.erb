@@ -5,10 +5,16 @@
       <span>Contributed by: </span>
       <%= link_to @recipe.user.username, user_path(@recipe.user) %>
     </p>
+
+    <h2>Directions</h2>
+    <p><%= @recipe.body %></p>
   </article>
 
   <article class="right-content">
-
+    <h2>Seasonal Ingredients</h2>
+    <p>
+      
+    </p>
 
     <aside id="recipe-image" class="round-image">
       <img src="" alt="">
