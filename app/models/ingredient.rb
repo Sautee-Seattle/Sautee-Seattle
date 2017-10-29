@@ -5,7 +5,7 @@ class Ingredient < ApplicationRecord
   has_many :ingredients_posts
   has_many :posts, through: :ingredients_posts
 
-  validates :name, :description, presence: true
+  validates :name, presence: true
 
   def recipes
     posts.select {|post| post.post_type == "recipe"}
