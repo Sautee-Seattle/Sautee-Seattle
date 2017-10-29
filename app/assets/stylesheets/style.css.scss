@@ -1,4 +1,10 @@
 /* css document */ /* general styles */
+@font-face {
+    font-family: 'elliotsixregular';
+    src:font-url('ElliotSix-webfont.eot');
+    src:font-url('ElliotSix-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('ElliotSix-webfont.woff') format('woff'),
+}
 
 /* color palette */
 :root {
@@ -7,7 +13,7 @@
   --summer: #8cc63f;
   --spring: #dc1e79;
   --winter: #29abe2;
-  --fall: #f15a24;s
+  --fall: #f15a24;
 }
 
 
@@ -20,6 +26,13 @@ body {
   line-height: 1.5em;
   box-sizing: border-box;
   border: 25px solid #fff;
+  color: #fff;
+  line-height: 1.65em;
+  font-family: 'elliotsixregular';
+}
+
+p {
+  font-family: 'elliotsixregular';
 }
 
 main, section, article, div, header, footer aside {
