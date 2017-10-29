@@ -12,7 +12,7 @@
         <% end %>
       </ul>
       <span class="see-more">
-        <%= link_to "More places to go...", "#" %>
+        <%= link_to "More places to go...", ingredient_locations_path(@ingredient) %>
       </span>
     </aside>
   </article>
@@ -32,7 +32,7 @@
             location to buy <%= @ingredient.name.pluralize(2).downcase %>.
           </p>
           <span>
-            <%= link_to "Add a Location", location_new_ingredient_post_path(@ingredient) %>
+            <%= link_to "Add a Location", new_ingredient_post_location_path(@ingredient, @post = session[:user_id]) %>
           </span>
           <span>
             <%= link_to "Share Recipe", "#" %>

@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :seasons , only: [:index, :show]
   resources :ingredients, only: [:show] do
+    resources :locations, only: [:index]
     resources :posts, only: [:create, :show] do
-      get 'location', on: :new
+      resources :locations, only: [:new, :create]
+      # get 'location', on: :new
     end
   end
 

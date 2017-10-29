@@ -2,7 +2,7 @@
 
 <section id="location-new">
   <article class="left-content">
-    <%= form_for :post, url: ingredient_posts_path(@ingredient) do |f| %>
+    <%= form_for :post, url: ingredient_post_locations_path(@ingredient) do |f| %>
       <%= f.hidden_field :post_type, value: 'location' %>
       <div>
         <label>Location Name:</label>
