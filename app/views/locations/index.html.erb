@@ -1,8 +1,11 @@
 <section>
 
+  <% @ingredient.locations.each do |location| %>
   <div class="locations-index-all-locations">
-    <%= @ingredient.locations %>
-    <p>This is the place!!!</p>
+      <h3><a href="#"><%= location.title %></a></h3>
+      <p><%= location.body %></p>
+      <p>Posted by:<%= location.user.username %></p>
   </div>
+  <% end %>
 
 </section>
