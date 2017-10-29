@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @ingredient = Ingredient.find(params[:ingredient_id])
+    @description = "A little bird told us that you like #{@ingredient.name.pluralize(2)}. So, we decided to put together a few of our favorite #{@ingredient.name} recipes for you to check out! YOLO."
     render :index
   end
 
