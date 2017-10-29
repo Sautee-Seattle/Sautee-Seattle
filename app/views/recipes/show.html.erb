@@ -1,13 +1,17 @@
 <section>
   <article class="left-content">
-
+    <h1><%= @recipe.title %></h1>
+    <p>
+      <span>Contributed by: </span>
+      <%= link_to @recipe.user.username, user_path(@recipe.user) %>
+    </p>
   </article>
 
   <article class="right-content">
 
 
     <aside id="recipe-image" class="round-image">
-
+      <img src="" alt="">
     </aside>
   </article>
 </section>
