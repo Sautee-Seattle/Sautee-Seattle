@@ -9,9 +9,9 @@
 
         <div>
             <ul class="season-ingredient-partial-grid">
-                <% @season.ingredients.each do |ingredient| %>
+              <% @season.ingredients.each do |ingredient| %>
                 <%= render partial: "season_ingredient", locals: {ingredient: ingredient} %>
-                <% end %>
+              <% end %>
             </ul>
         </div>
 

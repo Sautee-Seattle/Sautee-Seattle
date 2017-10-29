@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 describe SessionsController, type: :controller do
-  let!(:user){User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')}
-  let(:session){Hash.new}
+  let!(:user) { create(:user) }
 
   describe 'sessions#new' do
     it 'returns a 200 status' do
@@ -13,7 +12,7 @@ describe SessionsController, type: :controller do
 
   describe 'sessions#create' do
     context 'good login' do
-      before(:each){ post :create, params: {:username => user.username, :password => 'pear'}, session: {user_id: user.id}}
+      before(:each){ post :create, params: {:username => user.username, :password => user.password}, session: {user_id: user.id}}
 
       it 'redirects to root on succesful login' do
         expect(response).to redirect_to '/'
@@ -21,7 +20,7 @@ describe SessionsController, type: :controller do
     end
 
     context 'bad login' do
-      before(:each){ post :create, params: {:username => user.username, :password => 'soup'}, session: {user_id: user.id}}
+      before(:each){ post :create, params: {:username => user.username, :password => user.password + "wenis"}, session: {user_id: user.id}}
 
       it 'redirects to login on a failed login' do
         expect(response).to redirect_to '/login'
