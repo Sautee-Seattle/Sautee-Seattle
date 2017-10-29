@@ -7,7 +7,7 @@
     <aside class="right-content locations">
       <h3>Locations</h3>
       <ul>
-        <% @ingredient.locations.each do |location| %>
+        <% @locations.each do |location| %>
           <li><%= location.title %></li>
         <% end %>
       </ul>
@@ -44,7 +44,7 @@
     <aside class="right-content recipes">
       <h3>Recipes</h3>
       <ul>
-        <% @ingredient.recipes.each do |recipe| %>
+        <% @recipes.each do |recipe| %>
           <li>
             <h4><%= recipe.title %></h4>
           </li>
