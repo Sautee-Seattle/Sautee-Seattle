@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
   resources :seasons , only: [:index, :show]
-  resources :ingredients, only: [:show]
+  resources :ingredients, only: [:show] do
+    resources :posts, only: [:index]
+  end
 
   resources :templates
 
