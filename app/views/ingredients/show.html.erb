@@ -32,7 +32,7 @@
             location to buy <%= @ingredient.name.pluralize(2).downcase %>.
           </p>
           <span>
-            <%= link_to "Add a Location", "#" %>
+            <%= link_to "Add a Location", location_new_ingredient_post_path(@ingredient) %>
           </span>
           <span>
             <%= link_to "Share Recipe", "#" %>

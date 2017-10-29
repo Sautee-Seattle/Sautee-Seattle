@@ -4,11 +4,15 @@
       <%= f.hidden_field :post_type, value: 'location' %>
       <div>
         <label>Location Name:</label>
+      </div>
+      <div>
         <%= f.text_field :title %>
       </div>
       <div>
         <label>Address:</label>
-        <%= f.text_field :body %>
+      </div>
+      <div>
+        <%= f.text_area :body %>
       </div>
       <div>
         <%= f.submit "Submit" %>
