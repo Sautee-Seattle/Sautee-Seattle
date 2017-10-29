@@ -18,10 +18,27 @@
   </article>
 
   <article class="bottom">
-    <aside class="left-content produce-info">
-      <h2><%= @ingredient.name %></h2>
-      <h6>Best Seasons -> <%= @seasons_string %></h6>
-      <p><%= @ingredient.description %></p>
+    <aside class="left-content">
+      <aside class="produce-info">
+        <h2><%= @ingredient.name %></h2>
+        <h6>Best Seasons -> <%= @seasons_string %></h6>
+        <p><%= @ingredient.description %></p>
+      </aside>
+      <% if session[:user_id] %>
+        <aside class="contribute">
+          <h2>Get Involved...</h2>
+          <p>
+            Feel free to share a recipe or a
+            location to buy <%= @ingredient.name.pluralize(2).downcase %>.
+          </p>
+          <span>
+            <%= link_to "Add a Location", "#" %>
+          </span>
+          <span>
+            <%= link_to "Share Recipe", "#" %>
+          </span>
+        </aside>
+      <% end %>
     </aside>
 
     <aside class="right-content recipes">
@@ -29,7 +46,7 @@
       <ul>
         <% @ingredient.recipes.each do |recipe| %>
           <li>
-            <h3><%= recipe.title %></h3>
+            <h4><%= recipe.title %></h4>
           </li>
         <% end %>
       </ul>

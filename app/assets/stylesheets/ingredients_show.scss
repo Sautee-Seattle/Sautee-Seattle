@@ -15,14 +15,22 @@
     }
   }
 
+  .bottom .contribute span {
+    display: block;
+    text-align: center;
+    border: medium black solid;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+  }
+
   .see-more {
     margin-top: 10px;
     display: inline-block;
-    a {
-      color: black;
-      text-decoration: none;
-      padding: 2px;
-    }
   }
 
   .produce-info {
