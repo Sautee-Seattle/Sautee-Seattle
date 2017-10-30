@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     if session[:user_id]
       @ingredient = Ingredient.find(params[:ingredient_id])
       @post = Post.create(post_params)
+      @post.ingredients << @ingredient 
       if @post.valid?
         redirect_to ingredient_path(@ingredient)
       else

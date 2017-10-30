@@ -38,6 +38,10 @@ RSpec.describe PostsController, type: :controller do
       it "creates a new location" do
         expect(Post.all.last.title).to eq("Wenistown")
       end
+
+      it "Associates a new location with that ingredient" do
+        expect(Ingredient.find(ingredient.id).locations.pluck(:title)).to include("Wenistown")
+      end
     end
 
     describe "invalid input" do
