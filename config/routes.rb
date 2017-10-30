@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   root to: "seasons#index"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :recipes, only: [:show]
+  end
+
   resources :seasons , only: [:index, :show]
+  resources :recipes, only: [:show]
   resources :ingredients, only: [:show] do
     resources :locations, only: [:index, :create]
     resources :posts, only: [:create, :show] do
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :templates
+  resources :templates, only: [:show]
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

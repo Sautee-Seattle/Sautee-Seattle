@@ -1,7 +1,7 @@
 <section id="user-profile">
   <article class="top">
     <aside class="left-content">
-      <img src="http://via.placeholder.com/250x250" alt="personal-bio" class="bio-img">
+      <img src="http://via.placeholder.com/250x250" alt="personal-bio" class="bio-img round-image">
     </aside>
 
     <aside class="right-content">
@@ -11,7 +11,7 @@
       </p>
     </aside>
   </article>
-  
+
   <article class="bottom">
     <aside class="left-content">
       <h2>Recently Posted Locations</h2>
@@ -25,7 +25,7 @@
       <h2>Recently Posted Recipes</h2>
       <ul>
         <% @user.recipes[0..5].each do |recipe| %>
-          <li><%= recipe.title %></li>
+          <li><%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %></li>
         <% end %>
       </ul>
     </aside>
