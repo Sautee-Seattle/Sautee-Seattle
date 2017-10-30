@@ -5,6 +5,7 @@ RSpec.describe Ingredient, type: :model do
 
   describe "associations" do
     it { should have_many(:posts) }
+
   end
 
   describe "virtual attributes" do

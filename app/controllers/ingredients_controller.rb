@@ -5,5 +5,6 @@ class IngredientsController < ApplicationController
     @recipes = @ingredient.recipes.sample(5)
     @locations = @ingredient.locations.sample(5)
     @seasons_string = @ingredient.seasons.pluck(:name).join(", ")
+    render :show
   end
 end

@@ -39,6 +39,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'json'
   gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :development do

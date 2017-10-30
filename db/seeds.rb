@@ -50,7 +50,20 @@ while Season.all.length < 4
   associate_produce(summer_produce_data, summer)
   associate_produce(fall_produce_data, fall)
 end
-################################################################################################################################################################
+  ###############################################################################
+User.create(username: "b", email: Faker::Internet.unique.email, password: "b", bio: Faker::Lorem.paragraph)
+
+10.times do
+  User.create(username: Faker::Internet.unique.user_name, email: Faker::Internet.unique.email, password: Faker::Internet.password, bio: Faker::Lorem.paragraph)
+end
+
+100.times do
+  Post.create!(post_type: "location", title: Faker::Food.unique.spice, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
+end
+
+100.times do
+  Post.create!(post_type: "recipe", title: Faker::Coffee.unique.blend_name, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
+end
 
 user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 user2 = User.create(username: 'Jerod', email: 'jerod@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
