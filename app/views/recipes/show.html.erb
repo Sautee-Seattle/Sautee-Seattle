@@ -16,13 +16,13 @@
       <% @recipe.ingredients.each do |ingredient| %>
         <%= ingredient.name %>
         <% if ingredient != @recipe.ingredients.last %>
-          
+          <%= ' | ' %>
         <% end %>
       <% end %>
     </p>
 
     <aside id="recipe-image" class="round-image">
-      <img src="" alt="">
+      <img src="<%= @recipe.url %>" alt="recipe image">
     </aside>
   </article>
 </section>
