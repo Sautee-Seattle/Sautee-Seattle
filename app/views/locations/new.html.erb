@@ -3,7 +3,7 @@
 <section id="location-new">
   <article id="container">
     <h1>Share Location</h1>
-    <%= form_for :post, url: ingredient_post_locations_path(@ingredient) do |f| %>
+    <%= form_for :post, url: ingredient_locations_path(@ingredient) do |f| %>
       <%= f.hidden_field :post_type, value: 'location' %>
       <div>
         <label>Name</label>
