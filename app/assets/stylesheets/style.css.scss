@@ -6,6 +6,18 @@
          font-url('ElliotSix-webfont.woff') format('woff'),
 }
 
+@font-face {
+    font-family: 'arapeyregular';
+    src: font-url('arapey-regular-webfont.woff2') format('woff2'),
+         font-url('arapey-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'arapeyitalic';
+    src: font-url('arapey-italic-webfont.woff2') format('woff2'),
+         font-url('arapey-italic-webfont.woff') format('woff');
+}
+
 /* color palette */
 :root {
   --green: #39b54a;
@@ -28,21 +40,22 @@ body {
   border: 25px solid #fff;
   color: #fff;
   line-height: 1.65em;
+  font-family: 'arapeyregular';
+  font-weight: 100;
+  height: 100vh;
+}
+
+h1, h2, h3 {
   font-family: 'elliotsixregular';
 }
 
-p {
-  font-family: 'elliotsixregular';
-}
-
-main, section, article, div, header, footer aside {
-  border: 1px solid red;
-}
+// main, section, article, div, header, footer aside {
+//   border: 1px solid red;
+// }
 
 main {
   width: 100%;
   background-color: var(--lalala);
-  height: 100vh;
 }
 
 section {
@@ -72,6 +85,10 @@ p {
   margin: 1.2em 0em 1.5em 0em;
 }
 
+span {
+  font-family: 'arapeyitalic';
+}
+
 /* end general styles */
 
 .left-content {
@@ -84,6 +101,24 @@ p {
   float: right;
 }
 
+.seasons li {
+  font-family: 'elliotsixregular';
+}
+
 footer {
   clear: both;
+}
+
+/* season ingredient list */
+
+.season-ingredient-partial-cell {
+  font-family: 'elliotsixregular';
+  font-size: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.season-ingredient-partial-cell a {
+  text-decoration: none;
+  color: #fff;
 }
