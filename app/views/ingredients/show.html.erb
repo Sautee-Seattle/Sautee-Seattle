@@ -28,16 +28,20 @@
         <h6>Best Seasons -> <%= @seasons_string %></h6>
         <p><%= @description %></p>
       </aside>
+      
       <% if session[:user_id] %>
         <aside class="contribute">
           <h2>Get Involved...</h2>
+
           <p>
             Feel free to share a recipe or a
             location to buy <%= @ingredient.name.pluralize(2).downcase %>.
           </p>
+
           <span>
             <%= link_to "Add a Location", location_new_ingredient_post_path(@ingredient) %>
           </span>
+
           <span>
             <%= link_to "Share Recipe", "#" %>
           </span>
