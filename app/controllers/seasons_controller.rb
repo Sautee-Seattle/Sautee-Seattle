@@ -1,6 +1,7 @@
 class SeasonsController < ApplicationController
 
   def index
+    @home = true
   end
 
   def show
