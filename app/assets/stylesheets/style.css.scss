@@ -105,6 +105,10 @@ span {
   font-family: 'elliotsixregular';
 }
 
+img, embed, object, video, iframe {
+  max-width: 100%;
+}
+
 footer {
   clear: both;
 }
@@ -121,4 +125,18 @@ footer {
 .season-ingredient-partial-cell a {
   text-decoration: none;
   color: #fff;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1350px) {
+  section {
+    width: 90%;
+  }
+}
+
+img {
+  width: 225px;
 }
