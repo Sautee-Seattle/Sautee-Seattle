@@ -1,10 +1,10 @@
-<section>
+<section id="recipe-show">
   <article class="left-content">
     <h1><%= @recipe.title %></h1>
-    <p>
+    <h3>
       <span>Contributed by: </span>
       <%= link_to @recipe.user.username, user_path(@recipe.user) %>
-    </p>
+    </h3>
 
     <h2>Directions</h2>
     <p><%= @recipe.body %></p>
@@ -14,7 +14,9 @@
     <h2>Seasonal Ingredients</h2>
     <p>
       <% @recipe.ingredients.each do |ingredient| %>
-        <%= link_to ingredient.name, ingredient_path(ingredient) %>
+        <span class="ingredient-name">
+          <%= link_to ingredient.name, ingredient_path(ingredient) %>
+        </span>
         <% if ingredient != @recipe.ingredients.last %>
           <%= ' | ' %>
         <% end %>
