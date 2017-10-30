@@ -20,17 +20,17 @@ RSpec.describe LocationsController, type: :controller do
     end
   end
 
-  context "locations#index" do
-    it 'renders the locations :index page when successful' do
-      get :index, params: {ingredient_id: ingredient.id}
-      expect(response).to render_template :index
+  context "locations#new" do
+    it 'renders the locations :new page when successful' do
+      get :new, params: {ingredient_id: ingredient.id, post_id: post.id}
+      expect(response).to render_template :new
     end
     it 'returns a status of 200 when successful' do
-      get :index, params: {ingredient_id: ingredient.id}
+      get :new, params: {ingredient_id: ingredient.id, post_id: post.id}
       expect(response.status).to be 200
     end
     it "assigns an ingredient instance variable" do
-      get :index, params: {ingredient_id: ingredient.id}
+      get :new, params: {ingredient_id: ingredient.id, post_id: post.id}
       expect(assigns[:ingredient].kind_of?(Ingredient)).to eq(true)
     end
   end

@@ -8,7 +8,7 @@ class LocationsController < ApplicationController
 
   def new
     @ingredient = Ingredient.find(params[:ingredient_id])
-    render :new_location
+    render :new
   end
 
   def create
@@ -20,7 +20,7 @@ class LocationsController < ApplicationController
         redirect_to ingredient_path(@ingredient)
       else
         @errors = @post.errors.full_messages
-        render :new_location
+        render :new
       end
     else
       redirect_to '/seasons'
