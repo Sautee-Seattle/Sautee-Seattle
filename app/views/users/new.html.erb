@@ -5,8 +5,19 @@
     <%= render 'shared/errors' %>
 
     <%= form_for @user, html: { class: 'form' } do |f| %>
-      <%= f.text_field :username, required: true, placeholder: 'Name' %>
-      <%= f.email_field :email, required: true, placeholder: 'Email' %>
+      <div class="label">
+        <label>Name</label>
+      </div>
+      <div>
+        <%= f.text_field :username, required: true %>
+      </div>
+      <div class="label">
+        <label>Email</label>
+      </div>
+      <div>
+        <%= f.email_field :email, required: true %>
+      </div>
+
       <%= f.password_field :password, required: true, placeholder: 'Password' %>
       <%= f.text_area :bio, placeholder: 'Bio' %>
       <%= f.submit 'Register' %>
