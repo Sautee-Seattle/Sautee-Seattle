@@ -4,6 +4,17 @@ RSpec.describe RecipesController, type: :controller do
   let(:ingredient) {create(:ingredient_with_recipes)}
   let(:user) { create(:user) }
 
+  describe "#index" do
+    before(:each) {get :index, params: {ingredient_id: ingredient.id}}
+    it "renders template :index" do
+      expect(response).to render_template :index
+    end
+    it "assigns the right ingredient instance variable" do
+      expect(assigns[:ingredient]).to eq ingredient
+    end
+  end
+
+
   describe "#show" do
     let!(:user) { create(:user) }
     let(:recipe) { create(:post) }
