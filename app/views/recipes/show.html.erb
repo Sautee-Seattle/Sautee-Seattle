@@ -14,7 +14,7 @@
     <h2>Seasonal Ingredients</h2>
     <p>
       <% @recipe.ingredients.each do |ingredient| %>
-        <%= ingredient.name %>
+        <%= link_to ingredient.name, ingredient_path(ingredient) %>
         <% if ingredient != @recipe.ingredients.last %>
           <%= ' | ' %>
         <% end %>
