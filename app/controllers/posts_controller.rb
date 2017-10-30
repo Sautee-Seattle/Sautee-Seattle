@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+  def index
+    @ingredient = Ingredient.find(params[:ingredient_id])
+    @description = "A little bird told us that you like #{@ingredient.name.pluralize(2)}. So, we decided to put together a few of our favorite #{@ingredient.name} recipes for you to check out! YOLO."
+    render :index
+  end
+
   def location
     @ingredient = Ingredient.find(params[:ingredient_id])
     render :new_location
@@ -8,6 +14,7 @@ class PostsController < ApplicationController
     if session[:user_id]
       @ingredient = Ingredient.find(params[:ingredient_id])
       @post = Post.create(post_params)
+      @post.ingredients << @ingredient 
       if @post.valid?
         redirect_to ingredient_path(@ingredient)
       else

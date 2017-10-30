@@ -1,20 +1,21 @@
 <%= render 'shared/errors' %>
 
 <section id="location-new">
-  <article class="left-content">
+  <article id="container">
+    <h1>Share Location</h1>
     <%= form_for :post, url: ingredient_posts_path(@ingredient) do |f| %>
       <%= f.hidden_field :post_type, value: 'location' %>
       <div>
-        <label>Location Name:</label>
+        <label>Name</label>
       </div>
       <div>
         <%= f.text_field :title %>
       </div>
       <div>
-        <label>Address:</label>
+        <label>URL</label>
       </div>
       <div>
-        <%= f.text_area :body %>
+        <%= f.text_field :body %>
       </div>
       <div>
         <%= f.submit "Submit" %>

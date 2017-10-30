@@ -1,10 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
-  let(:ingredient) {create(:ingredient)}
+  let(:ingredient) {create(:ingredient_with_recipes)}
   let(:user) { create(:user) }
+
+  describe "ingredients/posts/index" do
+    before(:each) { get :index, params: { ingredient_id: ingredient.id} }
+
+    it "renders ingredients_posts template" do
+      expect(response).to render_template(:index)
+    end
+
+    it "assigns an ingredient instance variable" do
+      expect(assigns[:ingredient]).to eq(ingredient)
+    end
+  end
+
   describe "#location" do
     before(:each) { get :location, params: { ingredient_id: ingredient.id} }
+
     it "renders a location page" do
       expect(response).to render_template(:new_location)
     end
@@ -23,6 +37,10 @@ RSpec.describe PostsController, type: :controller do
 
       it "creates a new location" do
         expect(Post.all.last.title).to eq("Wenistown")
+      end
+
+      it "Associates a new location with that ingredient" do
+        expect(Ingredient.find(ingredient.id).locations.pluck(:title)).to include("Wenistown")
       end
     end
 
