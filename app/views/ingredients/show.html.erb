@@ -46,12 +46,13 @@
       <ul>
         <% @recipes.each do |recipe| %>
           <li>
-            <%= link_to recipe.title, user_recipe_path(recipe) %>
+            <%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
             <%=  %>
           </li>
         <% end %>
       </ul>
       <span class="see-more">
+        <%  %>
         <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
       </span>
     </aside>

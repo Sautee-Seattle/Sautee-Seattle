@@ -6,17 +6,12 @@
   <aside class="recipe-list">
     <h3>Ch ch check it out!</h3>
     <div class="separator"></div>
-    <ul>
-      <li>Mama's Apples</li>
-      <li>Papa's Apples</li>
-      <li>Blaine's Apples</li>
-      <li>Marlo's Apples</li>
-      <li>Taylor's Apples</li>
-      <% @ingredient.recipes.each do |recipe| %>
-        <li>
-          <%= link_to recipe.title, "#" %>
-        </li>
-      <% end %>
-    </ul>
+      <ul>
+        <% @ingredient.recipes.each do |recipe| %>
+          <li>
+            <%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
+          </li>
+        <% end %>
+      </ul>
   </aside>
 </section>
