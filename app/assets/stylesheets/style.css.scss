@@ -1,0 +1,124 @@
+/* css document */ /* general styles */
+@font-face {
+    font-family: 'elliotsixregular';
+    src:font-url('ElliotSix-webfont.eot');
+    src:font-url('ElliotSix-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('ElliotSix-webfont.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'arapeyregular';
+    src: font-url('arapey-regular-webfont.woff2') format('woff2'),
+         font-url('arapey-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'arapeyitalic';
+    src: font-url('arapey-italic-webfont.woff2') format('woff2'),
+         font-url('arapey-italic-webfont.woff') format('woff');
+}
+
+/* color palette */
+:root {
+  --green: #39b54a;
+  --lalala: #1a1a1a;
+  --summer: #8cc63f;
+  --spring: #dc1e79;
+  --winter: #29abe2;
+  --fall: #f15a24;
+}
+
+
+body, body * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5em;
+  box-sizing: border-box;
+  border: 25px solid #fff;
+  color: #fff;
+  line-height: 1.65em;
+  font-family: 'arapeyregular';
+  font-weight: 100;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'elliotsixregular';
+}
+
+// main, section, article, div, header, footer aside {
+//   border: 1px solid red;
+// }
+
+main {
+  width: 100%;
+  background-color: var(--lalala);
+}
+
+section {
+  width: 52%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+article {
+  width: 100%;
+  overflow: hidden;
+}
+
+aside {
+  border: 1px solid red;
+}
+
+h1, h2 {
+  margin: 1em 0em 1em 0em;
+}
+
+li {
+  margin-left: 1.25em;
+}
+
+p {
+  margin: 1.2em 0em 1.5em 0em;
+}
+
+span {
+  font-family: 'arapeyitalic';
+}
+
+/* end general styles */
+
+.left-content {
+  width: 48%;
+  float: left;
+}
+
+.right-content {
+  width: 48%;
+  float: right;
+}
+
+.seasons li {
+  font-family: 'elliotsixregular';
+}
+
+footer {
+  clear: both;
+}
+
+/* season ingredient list */
+
+.season-ingredient-partial-cell {
+  font-family: 'elliotsixregular';
+  font-size: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.season-ingredient-partial-cell a {
+  text-decoration: none;
+  color: #fff;
+}
