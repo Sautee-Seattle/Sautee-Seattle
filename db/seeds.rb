@@ -61,6 +61,10 @@ end
   Post.create!(post_type: "location", title: Faker::Food.unique.spice, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
 end
 
+100.times do
+  Post.create!(post_type: "recipe", title: Faker::Coffee.unique.blend_name, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
+end
+
 user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 user2 = User.create(username: 'Jerod', email: 'jerod@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
