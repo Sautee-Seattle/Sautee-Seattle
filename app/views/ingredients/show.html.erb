@@ -1,19 +1,23 @@
 <section id="ingredient-show">
   <article class="top">
     <aside class="left-content">
-      <img src="http://via.placeholder.com/250x250" alt="">
+      <img class="round-image" src="http://via.placeholder.com/250x250" alt="">
     </aside>
 
     <aside class="right-content locations">
       <h3>Locations</h3>
+
       <ul>
         <% @locations.each do |location| %>
           <li><%= link_to location.title, location.url %></li>
         <% end %>
       </ul>
-      <span class="see-more">
-        <%= link_to "More places to go...", "#" %>
-      </span>
+
+      <% if @locations.length > 5 %>
+        <span class="see-more">
+          <%= link_to "More places to go...", "#" %>
+        </span>
+      <% end %>
     </aside>
   </article>
 
@@ -24,16 +28,20 @@
         <h4>Best Seasons -> <%= @seasons_string %></h4>
         <p><%= @description %></p>
       </aside>
+      
       <% if session[:user_id] %>
         <aside class="contribute">
           <h2>Get Involved...</h2>
+
           <p>
             Feel free to share a recipe or a
             location to buy <%= @ingredient.name.pluralize(2).downcase %>.
           </p>
+
           <span>
             <%= link_to "Add a Location", location_new_ingredient_post_path(@ingredient) %>
           </span>
+
           <span>
             <%= link_to "Share Recipe", "#" %>
           </span>
@@ -43,6 +51,7 @@
 
     <aside class="right-content recipes">
       <h3>Recipes</h3>
+
       <ul>
         <% @recipes.each do |recipe| %>
           <li>
@@ -50,9 +59,12 @@
           </li>
         <% end %>
       </ul>
-      <span class="see-more">
-        <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
-      </span>
+
+      <% if @recipes.length > 5 %>
+        <span class="see-more">
+          <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
+        </span>
+      <% end %>
     </aside>
   </article>
 </section>
