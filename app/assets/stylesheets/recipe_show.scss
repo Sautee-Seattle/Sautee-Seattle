@@ -5,9 +5,14 @@
       margin-bottom: 10px;
     }
 
-    h3 > a {
-      color: gold;
-      text-decoration: none;
+    h3 {
+      font-family: 'arapeyregular';
+
+      a {
+        color: gold;
+        text-decoration: none;
+        font-family: 'arapeyitalic';
+      }
     }
   }
 
