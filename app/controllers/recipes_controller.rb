@@ -1,19 +1,16 @@
 class RecipesController < ApplicationController
-  def show
-    @recipe = Post.find(params[:id])
-  end
+
   def new
     @recipe = Post.new
-    @ingredients = Ingredient.all
-    @ingredient = Ingredient.find(params[:ingredient_id])
+    ingredients
   end
 
   def create
     if session[:user_id]
       @recipe = Post.new(recipe_params)
       if params[:ingredients]
-        ingredients = params[:ingredients].keys
-        ingredients.each do |name|
+        p params[:ingredients]
+        params[:ingredients].keys.each do |name|
           @recipe.ingredients << Ingredient.find_by(name: name)
         end
       end
@@ -21,8 +18,7 @@ class RecipesController < ApplicationController
         redirect_to recipe_path(@recipe)
       else
         @errors = @recipe.errors.full_messages
-        @ingredients = Ingredient.all
-        @ingredient = Ingredient.find(params[:ingredient_id])
+        ingredients
         render :new
       end
     end
@@ -35,5 +31,10 @@ class RecipesController < ApplicationController
     strong_params[:user] = user
     strong_params[:post_type] = 'recipe'
     strong_params
+  end
+
+  def ingredients
+    @ingredients = Ingredient.all
+    @ingredient = Ingredient.find(params[:ingredient_id])
   end
 end
