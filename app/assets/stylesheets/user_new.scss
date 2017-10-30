@@ -1,21 +1,27 @@
-#new-user-form {
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    font-size: 2em;
-  }
-
-  input {
-    display: inline-block;
-  }
-
-  textarea {
-    display: block;
-    width: 390px;
-    height: 50px;
+#users-new {
+  #new-user-form {
+    width: 70%;
     margin: 0 auto;
-    margin-top: 1.25em;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    input {
+      display: inline-block;
+    }
+
+    .label {
+      font-size: 1.5em;
+      font-family: 'elliotsixregular';
+    }
+
+    textarea {
+      display: block;
+      width: 390px;
+      height: 50px;
+      margin: 0 auto;
+      // margin-top: 1.25em;
+    }
   }
 }

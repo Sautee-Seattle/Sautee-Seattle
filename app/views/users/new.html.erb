@@ -1,5 +1,4 @@
 <section id="users-new">
-
   <article id="new-user-form">
     <h1>Create an Account!</h1>
     <%= render 'shared/errors' %>
@@ -17,10 +16,21 @@
       <div>
         <%= f.email_field :email, required: true %>
       </div>
-
-      <%= f.password_field :password, required: true, placeholder: 'Password' %>
-      <%= f.text_area :bio, placeholder: 'Bio' %>
-      <%= f.submit 'Register' %>
+      <div class="label">
+        <label>Password</label>
+      </div>
+      <div>
+        <%= f.password_field :password, required: true %>
+      </div>
+      <div class="label">
+        <label>Bio</label>
+      </div>
+      <div>
+        <%= f.text_area :bio %>
+      </div>
+      <div>
+        <%= f.submit 'Register' %>
+      </div>
     <% end %>
   </article>
 </section>
