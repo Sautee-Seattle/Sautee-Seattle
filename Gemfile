@@ -38,6 +38,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'json'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :development do

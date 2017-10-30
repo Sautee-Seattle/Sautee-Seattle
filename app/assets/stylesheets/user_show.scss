@@ -3,10 +3,20 @@
     border-radius: 50%;
   }
 
-  .bottom .left-content ul{
-    list-style: none;
-    li {
-      margin-left: 0px;
-    }
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  li, p {
+    font-size: 1.2em;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: white;
   }
 }

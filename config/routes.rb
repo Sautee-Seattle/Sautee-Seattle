@@ -6,11 +6,10 @@ Rails.application.routes.draw do
   end
 
   resources :seasons , only: [:index, :show]
-  
+  resources :recipes, only: [:show]
   resources :ingredients, only: [:show] do
-    resources :posts, only: [:create, :show, :index] do
-      get 'location', on: :new
-    end
+    resources :recipes, only: [:create, :new, :index]
+    resources :locations, only: [:index, :create, :new]
   end
 
   resources :templates, only: [:show]
