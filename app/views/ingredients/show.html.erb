@@ -46,7 +46,7 @@
       <ul>
         <% @recipes.each do |recipe| %>
           <li>
-            <h4><%= recipe.title %></h4>
+            <%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
           </li>
         <% end %>
       </ul>

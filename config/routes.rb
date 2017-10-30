@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   root to: "seasons#index"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :recipes, only: [:show]
+  end
+
   resources :seasons , only: [:index, :show]
+  
   resources :ingredients, only: [:show] do
     resources :posts, only: [:create, :show, :index] do
       get 'location', on: :new
