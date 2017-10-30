@@ -11,11 +11,16 @@
   <nav class="login-nav">
     <ul>
       <% unless session[:user_id] %>
-      <li><%= link_to "login", login_path %></li>
-      <li><%= link_to "register", new_user_path %></li>
+        <li><%= link_to "login", login_path %></li>
+        <li><%= link_to "register", new_user_path %></li>
       <% else %>
         <li><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete %></li>
-        <li><%= link_to "See Profile", user_path(User.find(session[:user_id])) %></li>
+
+        <% if current_page?(user_path(User.find(session[:user_id]))) %>
+          <li>Hello <%= User.find(session[:user_id]).username %></li>
+        <% else %>
+          <li><%= link_to "My Profile", user_path(User.find(session[:user_id])) %></li>
+        <% end %>
       <% end %>
     </ul>
   </nav>
