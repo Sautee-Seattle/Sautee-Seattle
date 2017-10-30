@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
         end
       end
       if @recipe.save
-        redirect_to recipe_path(@recipe)
+        redirect_to user_recipe_path(@recipe.user, @recipe)
       else
         @errors = @recipe.errors.full_messages
         ingredients

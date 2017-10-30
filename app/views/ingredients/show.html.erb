@@ -28,7 +28,7 @@
         <h4>Best Seasons -> <%= @seasons_string %></h4>
         <p><%= @description %></p>
       </aside>
-      
+
       <% if session[:user_id] %>
         <aside class="contribute">
           <h2>Get Involved...</h2>
@@ -43,7 +43,7 @@
           </span>
 
           <span>
-            <%= link_to "Share Recipe", "#" %>
+            <%= link_to "Share Recipe", new_ingredient_recipe_path(@ingredient) %>
           </span>
         </aside>
       <% end %>
