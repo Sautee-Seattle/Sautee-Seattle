@@ -1,5 +1,6 @@
 <header>
   <h1><a href="/">Sautee' Seattle</a></h1>
+
   <nav class="seasons">
     <ul>
       <li><a href="/seasons/Spring">Spring</a></li>
@@ -11,8 +12,7 @@
   <nav class="login-nav">
     <ul>
       <% unless session[:user_id] %>
-        <li><%= link_to "login", login_path %></li>
-        <li><%= link_to "register", new_user_path %></li>
+        <li><%= link_to "login", login_path %> | <%= link_to "register", new_user_path %></li>
       <% else %>
         <li><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete %></li>
 
@@ -25,3 +25,10 @@
     </ul>
   </nav>
 </header>
+  <% if @season.nil? && @home %>
+    <div class=""></div>
+  <% elsif @season.nil? %>
+    <div class="season-bar"></div>
+  <% else %>
+    <div class="season-bar <%= @season.name %>"></div>
+  <% end %>
