@@ -1,5 +1,9 @@
 class RecipesController < ApplicationController
 
+  def show
+    @recipe = Post.find(params[:id])
+  end
+
   def new
     @recipe = Post.new
     ingredients

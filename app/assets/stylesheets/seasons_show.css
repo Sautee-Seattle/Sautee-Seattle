@@ -1,6 +1,5 @@
 /* START Season Spring */
 .seasons-show-Spring {
-  background-color: Yellow;
   text-align: center;
 }
 /* END Season Spring */
@@ -8,7 +7,6 @@
 
 /* START Season Summer */
 .seasons-show-Summer {
-  background-color: Red;
   text-align: center;
 }
 /* END Season Summer */
@@ -16,7 +14,6 @@
 
 /* START Season Fall */
 .seasons-show-Fall {
-  background-color: Orange;
   text-align: center;
 }
 /* END Season Fall */
@@ -24,7 +21,6 @@
 
 /* START Season Winter */
 .seasons-show-Winter {
-  background-color: Gray;
   text-align: center;
 }
 /* END Season Winter */

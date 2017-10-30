@@ -1,2 +1,28 @@
-<h1> <%= @recipe.title %> </h1>
-<h3>Contrinuted by: <%= @recipe.user.username %> </h3>
+<section>
+  <article class="left-content">
+    <h1><%= @recipe.title %></h1>
+    <p>
+      <span>Contributed by: </span>
+      <%= link_to @recipe.user.username, user_path(@recipe.user) %>
+    </p>
+
+    <h2>Directions</h2>
+    <p><%= @recipe.body %></p>
+  </article>
+
+  <article class="right-content">
+    <h2>Seasonal Ingredients</h2>
+    <p>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <%= link_to ingredient.name, ingredient_path(ingredient) %>
+        <% if ingredient != @recipe.ingredients.last %>
+          <%= ' | ' %>
+        <% end %>
+      <% end %>
+    </p>
+
+    <aside id="recipe-image" class="round-image">
+      <img src="<%= @recipe.url %>" alt="recipe image">
+    </aside>
+  </article>
+</section>

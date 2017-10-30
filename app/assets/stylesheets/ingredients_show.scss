@@ -1,31 +1,31 @@
 #ingredient-show {
   ul {
     margin-top: 10px;
-    li {
-      p {
-        margin-top: 0px;
-      }
-    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 2px;
   }
 
   .top {
     .left-content img {
       border-radius: 50%;
-      border: 5px black solid;
+      border: 5px white solid;
+      padding: 1px;
     }
   }
 
   .bottom .contribute span {
     display: block;
     text-align: center;
-    border: medium black solid;
+    border: medium white solid;
     margin-bottom: 10px;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-    padding: 2px;
   }
 
   .see-more {
@@ -34,8 +34,9 @@
   }
 
   .produce-info {
-    h2 {
-      margin-bottom: 0px;
+    h1 {
+      margin-top: 30px;
+      font-size: 2em;
     }
   }
 }

@@ -8,7 +8,7 @@
       <h3>Locations</h3>
       <ul>
         <% @locations.each do |location| %>
-          <li><%= location.title %></li>
+          <li><%= link_to location.title, location.url %></li>
         <% end %>
       </ul>
       <span class="see-more">
@@ -20,8 +20,8 @@
   <article class="bottom">
     <aside class="left-content">
       <aside class="produce-info">
-        <h2><%= @ingredient.name %></h2>
-        <h6>Best Seasons -> <%= @seasons_string %></h6>
+        <h1><%= @ingredient.name %></h1>
+        <h4>Best Seasons -> <%= @seasons_string %></h4>
         <p><%= @description %></p>
       </aside>
       <% if session[:user_id] %>
@@ -46,7 +46,7 @@
       <ul>
         <% @recipes.each do |recipe| %>
           <li>
-            <h4><%= recipe.title %></h4>
+            <%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
           </li>
         <% end %>
       </ul>
