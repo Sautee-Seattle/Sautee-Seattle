@@ -48,19 +48,6 @@ RSpec.describe LocationsController, type: :controller do
       post :create, session: {user_id: user.id}, params: {ingredient_id: ingredient.id, post: {post_type: "location", title: "Post number 2", body: "This is post 2's body!"}}
       expect(response).to redirect_to ingredient_path(ingredient)
     end
-    # it 'renders the locations :create page when successful' do
-    #   session[:user_id] = user.id
-    #   post :create, params: {ingredient_id: ingredient.id, post: post}
-    #   expect(response).to render_template ingredient_path
-    # end
-    # it 'returns a status of 200 when successful' do
-    #   get :create, params: {ingredient_id: ingredient.id, post_id: post.id}
-    #   expect(response.status).to be 200
-    # end
-    # it "assigns an ingredient instance variable" do
-    #   get :create, params: {ingredient_id: ingredient.id, post_id: post.id}
-    #   expect(assigns[:ingredient].kind_of?(Ingredient)).to eq(true)
-    # end
   end
 
 end
