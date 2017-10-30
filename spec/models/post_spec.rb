@@ -11,12 +11,12 @@ RSpec.describe Post, type: :model do
   describe "hooks" do
     let (:user) { create(:user) }
     it "should default url to # if post_type is location" do
-      post = create(:post, post_type: "location")
+      post = create(:post, post_type: "location", url: '')
       expect(post.url).to eq("#")
     end
 
     it "should default url to pan.png if post_type is recipe" do
-      post = create(:post, post_type: "recipe")
+      post = create(:post, post_type: "recipe", url: nil)
       expect(post.url).to eq("pan.png")
     end
 
