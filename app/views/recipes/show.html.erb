@@ -13,7 +13,12 @@
   <article class="right-content">
     <h2>Seasonal Ingredients</h2>
     <p>
-      
+      <% @recipe.ingredients.each do |ingredient| %>
+        <%= ingredient.name %>
+        <% if ingredient != @recipe.ingredients.last %>
+          
+        <% end %>
+      <% end %>
     </p>
 
     <aside id="recipe-image" class="round-image">
