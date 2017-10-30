@@ -13,7 +13,6 @@ class RecipesController < ApplicationController
     if session[:user_id]
       @recipe = Post.new(recipe_params)
       if params[:ingredients]
-        p params[:ingredients]
         params[:ingredients].keys.each do |name|
           @recipe.ingredients << Ingredient.find_by(name: name)
         end
