@@ -6,14 +6,18 @@
 
     <aside class="right-content locations">
       <h3>Locations</h3>
+
       <ul>
         <% @locations.each do |location| %>
           <li><%= location.title %></li>
         <% end %>
       </ul>
-      <span class="see-more">
-        <%= link_to "More places to go...", "#" %>
-      </span>
+
+      <% if @locations.length > 5 %>
+        <span class="see-more">
+          <%= link_to "More places to go...", "#" %>
+        </span>
+      <% end %>
     </aside>
   </article>
 
@@ -43,6 +47,7 @@
 
     <aside class="right-content recipes">
       <h3>Recipes</h3>
+
       <ul>
         <% @recipes.each do |recipe| %>
           <li>
@@ -50,9 +55,12 @@
           </li>
         <% end %>
       </ul>
-      <span class="see-more">
-        <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
-      </span>
+
+      <% if @recipes.length > 5 %>
+        <span class="see-more">
+          <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
+        </span>
+      <% end %>
     </aside>
   </article>
 </section>
