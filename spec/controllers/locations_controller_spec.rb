@@ -1,47 +1,38 @@
 require 'rails_helper'
-require 'capybara'
 
-RSpec.describe LocationsController, type: :feature do
+RSpec.describe LocationsController, type: :controller do
   let!(:ingredient) {Ingredient.create!(name: "Carrot")}
   let!(:user) {User.create!(username: "Bob", email: "bob@bob.com", password: "bob", bio: "Bob things.")}
   let!(:post) {Post.create!(post_type: "location", title: "Post number 1", body: "This is post 1's body!", url: "#", user: user)}
 
   context "locations#index" do
-    it ":index has expected content" do
-      visit("/ingredients/#{ingredient.id}/locations")
-      expect(page).to have_content 'More places to go...'
+    it 'renders the locations :index page when successful' do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(response).to render_template :index
     end
-    it "renders the :index page successfully" do
-      visit("/ingredients/#{ingredient.id}/locations")
-      expect(page).to have_current_path(ingredient_locations_path(ingredient.id))
+    it 'returns a status of 200 when successful' do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(response.status).to be 200
     end
-  end
-
-  context "locations#new" do
-    it ":new has expected content" do
-      visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
-      expect(page).to have_content 'Share Location'
-    end
-    it "renders the :new page successfully" do
-      visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
-      expect(page).to have_current_path(new_ingredient_post_location_path(ingredient.id, post.id))
+    it "assigns an ingredient instance variable" do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(assigns[:ingredient].kind_of?(Ingredient)).to eq(true)
     end
   end
 
-  context "locations#create" do
-    it "renders the :new page successfully" do
-      visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
-      click_button('Submit')
-      expect(page).to have_current_path(seasons_path)
+  context "locations#index" do
+    it 'renders the locations :index page when successful' do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(response).to render_template :index
     end
-    # it ":create has expected content" do
-    #   visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
-    #   click_button('Submit')
-    #   # save_and_open_page
-    #   # print page.html
-    #   expect(page.find('#container')).to have_content 'Share Location'
-    #   # expect(page).to have_content 'Share Location'
-    # end
+    it 'returns a status of 200 when successful' do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(response.status).to be 200
+    end
+    it "assigns an ingredient instance variable" do
+      get :index, params: {ingredient_id: ingredient.id}
+      expect(assigns[:ingredient].kind_of?(Ingredient)).to eq(true)
+    end
   end
 
 end
