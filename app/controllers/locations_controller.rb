@@ -22,6 +22,8 @@ class LocationsController < ApplicationController
         @errors = @post.errors.full_messages
         render :new_location
       end
+    else
+      redirect_to '/seasons'
     end
   end
 

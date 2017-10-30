@@ -28,4 +28,20 @@ RSpec.describe LocationsController, type: :feature do
     end
   end
 
+  context "locations#create" do
+    it "renders the :new page successfully" do
+      visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
+      click_button('Submit')
+      expect(page).to have_current_path(seasons_path)
+    end
+    # it ":create has expected content" do
+    #   visit("/ingredients/#{ingredient.id}/posts/#{post.id}/locations/new")
+    #   click_button('Submit')
+    #   # save_and_open_page
+    #   # print page.html
+    #   expect(page.find('#container')).to have_content 'Share Location'
+    #   # expect(page).to have_content 'Share Location'
+    # end
+  end
+
 end
