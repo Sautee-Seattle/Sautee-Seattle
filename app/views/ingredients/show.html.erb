@@ -12,7 +12,7 @@
           <li><%= link_to location.title, location.url %></li>
         <% end %>
       </ul>
-    <% if @locations.length > 5 %>
+    <% if @ingredient.locations.length > 5 %>
       <span class="see-more">
         <%= link_to "More places to go...", ingredient_locations_path(@ingredient) %>
       </span>
@@ -38,7 +38,7 @@
           </p>
 
           <span>
-            <%= link_to "Add a Location", new_ingredient_post_location_path(@ingredient, @post = session[:user_id]) %>
+            <%= link_to "Add a Location", new_ingredient_location_path(@ingredient) %>
           </span>
 
           <span>
@@ -59,9 +59,9 @@
         <% end %>
       </ul>
 
-      <% if @recipes.length > 5 %>
+      <% if @ingredient.recipes.length > 5 %>
         <span class="see-more">
-          <%= link_to "More recipes...", ingredient_posts_path(@ingredient) %>
+          <%= link_to "More recipes...", ingredient_recipes_path(@ingredient) %>
         </span>
       <% end %>
     </aside>

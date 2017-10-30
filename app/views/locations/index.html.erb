@@ -3,7 +3,7 @@
   <h1>More places to go...</h1>
   <% @ingredient.locations.each do |location| %>
   <div class="locations-index-all-locations">
-      <h3><a href="#"><%= location.title %></a></h3>
+      <h3><a href="<%= location.url %>"><%= location.title %></a></h3>
       <p><%= location.body %></p>
       <p>Posted by: <%= link_to location.user.username, user_path(location.user) %></p>
   </div>
