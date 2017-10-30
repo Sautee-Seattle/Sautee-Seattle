@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :seasons , only: [:index, :show]
   resources :recipes, only: [:show]
   resources :ingredients, only: [:show] do
+    resources :recipes, only: [:create, :new]
     resources :locations, only: [:index, :create]
     resources :posts, only: [:create, :show] do
       resources :locations, only: [:new]
