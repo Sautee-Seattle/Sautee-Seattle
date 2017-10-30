@@ -2,7 +2,6 @@ div.seasons-main {
   --main-body-color: white;
 }
 
-
 main.home-page{
   color: var(--main-body-color);
   margin: 0 auto;
