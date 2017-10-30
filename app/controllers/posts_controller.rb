@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  def new
+    @post = Post.new
+    @ingredients = Ingredient.all
+  end
+
   def index
     @ingredient = Ingredient.find(params[:ingredient_id])
     @description = "A little bird told us that you like #{@ingredient.name.pluralize(2)}. So, we decided to put together a few of our favorite #{@ingredient.name} recipes for you to check out! YOLO."
