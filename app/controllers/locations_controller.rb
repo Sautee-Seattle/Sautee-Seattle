@@ -1,8 +1,4 @@
-class PostsController < ApplicationController
-  def new
-    @post = Post.new
-    @ingredients = Ingredient.all
-  end
+class LocationsController < ApplicationController
 
   def index
     @ingredient = Ingredient.find(params[:ingredient_id])
@@ -10,22 +6,24 @@ class PostsController < ApplicationController
     render :index
   end
 
-  def location
+  def new
     @ingredient = Ingredient.find(params[:ingredient_id])
-    render :new_location
+    render :new
   end
 
   def create
     if session[:user_id]
       @ingredient = Ingredient.find(params[:ingredient_id])
       @post = Post.create(post_params)
-      @post.ingredients << @ingredient 
+      @post.ingredients << @ingredient
       if @post.valid?
         redirect_to ingredient_path(@ingredient)
       else
         @errors = @post.errors.full_messages
-        render :new_location
+        render :new
       end
+    else
+      redirect_to '/seasons'
     end
   end
 
@@ -37,4 +35,5 @@ class PostsController < ApplicationController
     strong_params[:user] = user
     strong_params
   end
+
 end
