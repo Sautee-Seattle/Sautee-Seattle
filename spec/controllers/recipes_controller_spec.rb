@@ -45,7 +45,7 @@ RSpec.describe RecipesController, type: :controller do
     let(:new_recipe) { {post_type: 'recipe', title: 'hassan scramble', body: "just beat it"} }
     it "redirects to recipe#show if it is valid" do
       post :create, params: { ingredient_id: ingredient.id, post: new_recipe }, session: { user_id: user.id }
-      expect(response).to redirect_to(recipe_path(Post.last))
+      expect(response).to redirect_to(user_recipe_path(Post.last.user, Post.last))
     end
 
     it "redirects to recipe#new" do
