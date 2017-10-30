@@ -5,7 +5,7 @@
     </aside>
 
     <aside class="right-content">
-      <h2>Recently Posted Locations</h2>
+      <h3>Recently Posted Locations</h3>
       <ul>
         <% @user.locations[0..5].each do |location| %>
           <li><%= location.title %></li>
@@ -22,7 +22,7 @@
       </p>
     </aside>
     <aside class="right-content">
-      <h2>Recently Posted Recipes</h2>
+      <h3>Recently Posted Recipes</h3>
       <ul>
         <% @user.recipes[0..5].each do |recipe| %>
           <li><%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %></li>
