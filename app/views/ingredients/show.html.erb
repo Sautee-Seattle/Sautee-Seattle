@@ -8,7 +8,7 @@
       <h3>Locations</h3>
       <ul>
         <% @locations.each do |location| %>
-          <li><%= location.title %></li>
+          <li><%= link_to location.title, location.url %></li>
         <% end %>
       </ul>
       <span class="see-more">
