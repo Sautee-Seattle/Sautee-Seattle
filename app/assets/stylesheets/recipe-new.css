@@ -1,0 +1,7 @@
+.new_post{
+  display: grid;
+}
+.recipe-ingredients{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
