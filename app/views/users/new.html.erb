@@ -3,8 +3,8 @@
     <h1>Create an Account!</h1>
 
     <%= form_for @user, html: { class: 'form' } do |f| %>
-    <%= render "shared/errors", object: @recipe %>
-    
+    <%= render "shared/errors" %>
+
       <div class="label">
         <label>Name</label>
       </div>
