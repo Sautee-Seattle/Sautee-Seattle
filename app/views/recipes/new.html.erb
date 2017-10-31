@@ -3,7 +3,7 @@
   <%= form_for @recipe, url: ingredient_recipes_path(@ingredient) do |f| %>
     <%= render "shared/errors", object: @recipe %>
     <%= f.label :title, 'recipe name:' %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true, autofocus: true %>
     <label>tag ingredients:</label>
     <div class="recipe-ingredients">
       <% @ingredients.each do |ing| %>
@@ -11,7 +11,7 @@
       <% end %>
     </div>
     <%= f.label :body, 'directions:' %>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, required: true %>
     <%= f.submit 'submit recipe' %>
   <% end %>
 </section>

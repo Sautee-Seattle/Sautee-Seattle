@@ -1,4 +1,8 @@
 #errors {
-  color: red;
-  text-align: center;
+  color: #a94442;
+  background-color: #f2dede;
+  border: #a94442 solid .1em;
+  font-size: 1.2em;
+  padding: 1.2em;
+  margin: 1.2em 0;
 }

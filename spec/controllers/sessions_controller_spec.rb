@@ -23,7 +23,7 @@ describe SessionsController, type: :controller do
       before(:each){ post :create, params: {:username => user.username, :password => user.password + "wenis"}, session: {user_id: user.id}}
 
       it 'redirects to login on a failed login' do
-        expect(response).to redirect_to '/login'
+        expect(response).to render_template :new
       end
     end
 

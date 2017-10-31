@@ -31,7 +31,7 @@ class LocationsController < ApplicationController
 
   def post_params
     user = User.find(session[:user_id])
-    strong_params = params.require(:post).permit(:post_type, :title, :body)
+    strong_params = params.require(:post).permit(:post_type, :title, :url, :body)
     strong_params[:user] = user
     strong_params
   end
