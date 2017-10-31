@@ -33,7 +33,6 @@
 
 .seasons-show-header h2 {
   text-align: left;
-  padding-left: 0.8em;
 }
 
 /* END Show Seasons */
@@ -46,5 +45,6 @@
 }
 
 .season-ingredient-partial-cell {
+  margin-left: 0px;
 }
 /* END Partial _Season_Ingredient */
