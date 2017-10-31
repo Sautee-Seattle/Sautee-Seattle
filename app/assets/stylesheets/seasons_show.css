@@ -52,13 +52,16 @@
 }
 
 .season-ingredient-partial-cell {
+  font-family: 'elliotsixregular';
   margin-left: 0px;
   border: 2px var(--lalala) solid;
+  padding: 20px 0px 20px 10px;
 }
 
 .season-ingredient-partial-cell > a {
-  font-size: 0.75em;
-  padding-left: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--main-link-color);
 }
 
 .season-ingredient-partial-cell:hover {
