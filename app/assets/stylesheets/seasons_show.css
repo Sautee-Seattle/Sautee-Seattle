@@ -38,6 +38,7 @@
 
 .seasons-show-header h2 {
   text-align: left;
+  font-size: 2em;
 }
 
 /* END Show Seasons */
@@ -52,6 +53,10 @@
 .season-ingredient-partial-cell {
   margin-left: 0px;
   border: 2px var(--lalala) solid;
+}
+
+.season-ingredient-partial-cell > a {
+  font-size: 0.75em;
 }
 
 .season-ingredient-partial-cell:hover {
