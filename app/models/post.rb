@@ -3,7 +3,6 @@ class Post < ApplicationRecord
   has_many :ingredients, through: :ingredients_posts
   belongs_to :user
 
-  validates :url, presence: true
   validates :post_type, :url, presence: true
   validate :title_validation
   validate :body_validation
