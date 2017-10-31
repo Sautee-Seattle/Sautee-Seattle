@@ -24,7 +24,12 @@
     <aside class="left-content">
       <aside class="produce-info">
         <h1><%= @ingredient.name %></h1>
-        <h4>Best Seasons -> <%= @seasons_string %></h4>
+        <h4>
+          In Season During ->
+          <% @seasons_names.each do |name| %>
+            <span class="season-name"><%= name %></span>
+          <% end %>
+        </h4>
         <p><%= @description %></p>
       </aside>
 
