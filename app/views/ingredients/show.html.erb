@@ -9,7 +9,7 @@
 
       <ul>
         <% @locations.each do |location| %>
-          <li><%= link_to location.title, location.url %></li>
+          <li><%= link_to location.title, "http://#{location.url}", target: '_blank' %></li>
         <% end %>
       </ul>
     <% if @ingredient.locations.length > 5 %>
