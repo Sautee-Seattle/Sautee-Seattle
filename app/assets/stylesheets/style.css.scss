@@ -72,12 +72,14 @@ main {
   width: 100%;
   background-color: var(--lalala);
   border-bottom: 35px solid #fff;
+  padding-bottom: 2em;
+  overflow: hidden;
 }
 
 section {
   width: 52%;
   margin: 0 auto;
-  height: 100vh;
+  padding-bottom: 2em;
 }
 
 article {
