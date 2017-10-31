@@ -28,6 +28,11 @@
   --fall: #f15a24;
 }
 
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
 .manifesto-img {
   margin-top: 2em;
   width: 350px;
@@ -80,14 +85,12 @@ main {
   background-color: var(--lalala);
   border-bottom: 35px solid #fff;
   padding-bottom: 2em;
-  overflow: hidden;
 }
 
 section {
   width: 52%;
   margin: 0 auto;
   padding-bottom: 2em;
-  height: 100vh;
 }
 
 article {

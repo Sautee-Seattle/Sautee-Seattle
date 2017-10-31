@@ -12,9 +12,11 @@
   <body>
 
     <main>
-      <%= render "shared/login_bar" %>
-      <%= render "shared/home-page" %>
-      <%= yield %>
+      <div class="wrapper">
+        <%= render "shared/login_bar" %>
+        <%= render "shared/home-page" %>
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
