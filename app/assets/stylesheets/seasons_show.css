@@ -57,6 +57,7 @@
 
 .season-ingredient-partial-cell > a {
   font-size: 0.75em;
+  padding-left: 10px;
 }
 
 .season-ingredient-partial-cell:hover {
