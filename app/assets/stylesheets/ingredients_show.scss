@@ -1,6 +1,10 @@
 #ingredient-show {
   ul {
     margin-top: 10px;
+
+    li:hover {
+      color: var(--green);
+    }
   }
 
   h2 {
@@ -11,6 +15,10 @@
     color: white;
     text-decoration: none;
     padding: 2px;
+
+    &:hover {
+      color: var(--green);
+    }
   }
 
   .bottom .contribute span {
