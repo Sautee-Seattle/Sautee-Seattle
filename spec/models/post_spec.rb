@@ -7,9 +7,19 @@ RSpec.describe Post, type: :model do
       post = build(:post, title: "")
       expect(post).to_not be_valid
     end
+    it 'blank title should display a specific error message if location' do
+      post = build(:location, title: "")
+      post.valid?
+      expect(post.errors.full_messages).to include("Name can't be blank.")
+    end
     it 'should have a body' do
       post = build(:post, body: "")
       expect(post).to_not be_valid
+    end
+    it "blank body should have specific error message if location" do
+      post = build(:location, body: "")
+      post.valid?
+      expect(post.errors.full_messages).to include("Address can't be blank.")
     end
     it { should validate_uniqueness_of(:title).scoped_to(:post_type) }
   end
