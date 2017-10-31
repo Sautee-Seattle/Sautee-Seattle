@@ -7,7 +7,10 @@ header {
 header {
   line-height: 50px;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "logo season user";
+  grid-gap: 5px;
   height: 40px;
 }
 
@@ -19,18 +22,11 @@ header ul {
 header li {
   grid-row: 1;
   font-family: 'elliotsixregular';
-  margin-top: 2em;
 }
 
 header a {
   text-decoration: none;
   color: var(--main-link-color);
-}
-
-header h1 {
-  font-size: 1.5em;
-  margin: 0;
-  padding-left: 2.55em;
 }
 
 header a:link,
@@ -51,9 +47,31 @@ header {
   background-color: var(--lalala);
 }
 
+nav {
+  vertial-align: middle;
+}
+
+nav.logo-nav {
+  grid-area: logo;
+  text-align: left;
+  font-size: 2em;
+  padding-left: 0.5em;
+  margin-top: 1em;
+}
+
 nav.seasons {
-  margin: 0 auto;
+  grid-area: season;
+  text-align: center;
+  padding-left: 4em;
   width: 50%;
+  margin-top: 2em;
+}
+
+nav.login-nav {
+  grid-area: user;
+  text-align: right;
+  padding-right: 2.55em;
+  margin-top: 2em;
 }
 
 .login-nav {
