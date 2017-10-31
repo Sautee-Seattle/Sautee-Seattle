@@ -15,7 +15,7 @@
         <li><%= link_to "login", login_path %> | <%= link_to "register", new_user_path %></li>
       <% else %>
         <li><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
-        
+
         <% if current_page?(user_path(User.find(session[:user_id]))) %>
           <li>Hello <%= User.find(session[:user_id]).username %></li>
         <% else %>
