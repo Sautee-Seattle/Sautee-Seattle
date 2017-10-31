@@ -1,24 +1,24 @@
-<section id="location-new">
-  <article id="container">
-    <h1>Share Location</h1>
+<section class="global-form-style">
+  <h1>Share Location</h1>
+  <aside>
     <%= form_for :post, url: ingredient_locations_path(@ingredient) do |f| %>
-    <%= render 'shared/errors' %>
+      <%= render 'shared/errors' %>
 
       <%= f.hidden_field :post_type, value: 'location' %>
-      <div>
-        <label>Name</label>
+      <div class="label">
+        <label><h3>Name</h3></label>
       </div>
       <div>
         <%= f.text_field :title, required: true, autofocus: true %>
       </div>
-      <div>
-        <label>Address</label>
+      <div class="label">
+        <label><h3>Address</h3></label>
       </div>
       <div>
         <%= f.text_field :body, required: true %>
       </div>
-      <div>
-        <label>URL</label>
+      <div class="label">
+        <label><h3>URL</h3></label>
       </div>
       <div>
         <%= f.text_field :url %>
@@ -27,5 +27,5 @@
         <%= f.submit "Submit" %>
       </div>
     <% end %>
-  </article>
+  </aside>
 </section>

@@ -1,17 +1,25 @@
-<section>
-  <h3>add your recipe!</h3>
-  <%= form_for @recipe, url: ingredient_recipes_path(@ingredient) do |f| %>
-    <%= render "shared/errors", object: @recipe %>
-    <%= f.label :title, 'recipe name:' %>
-    <%= f.text_field :title, required: true, autofocus: true %>
-    <label>tag ingredients:</label>
-    <div class="recipe-ingredients">
-      <% @ingredients.each do |ing| %>
-      <span><input type="checkbox" name="ingredients[<%= ing.name %>]" id="<%= ing.name %>" <% if @ingredient == ing %> checked <% end %> > <label for="<%= ing.name %>"><%= ing.name %></label></span>
-      <% end %>
-    </div>
-    <%= f.label :body, 'directions:' %>
-    <%= f.text_field :body, required: true %>
-    <%= f.submit 'submit recipe' %>
-  <% end %>
+<section class="global-form-style">
+  <h1>add your recipe!</h1>
+  <aside class="new_post">
+    <%= form_for @recipe, url: ingredient_recipes_path(@ingredient) do |f| %>
+      <%= render "shared/errors", object: @recipe %>
+      <div class="label">
+        <h3><%= f.label :title, 'recipe name:' %></h3>
+      </div>
+      <%= f.text_field :title, required: true, autofocus: true %>
+      <div class="label">
+        <label><h3>tag ingredients:</h3></label>
+      </div>
+      <div class="recipe-ingredients">
+        <% @ingredients.each do |ing| %>
+        <span><input type="checkbox" name="ingredients[<%= ing.name %>]" id="<%= ing.name %>" <% if @ingredient == ing %> checked <% end %> > <label for="<%= ing.name %>"><%= ing.name %></label></span>
+        <% end %>
+      </div>
+      <div class="label">
+        <h3><%= f.label :body, 'directions:' %></h3>
+      </div>
+      <%= f.text_area :body, required: true %>
+      <%= f.submit 'submit recipe' %>
+    <% end %>
+  </aside>
 </section>
