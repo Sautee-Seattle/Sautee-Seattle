@@ -4,7 +4,7 @@ class IngredientsController < ApplicationController
     @description = "Hey! #{@ingredient.name} are awesome! Here are some neat local places to find #{@ingredient.name.downcase}, as well as a few of our favorite recipes to get you started."
     @recipes = @ingredient.recipes.sample(5)
     @locations = @ingredient.locations.sample(5)
-    @seasons_string = @ingredient.seasons.pluck(:name).join(", ")
+    @seasons_names = @ingredient.seasons.pluck(:name).join(", ").split(" ")
     render :show
   end
 end

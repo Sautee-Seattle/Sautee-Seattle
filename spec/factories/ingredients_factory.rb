@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :ingredient do
     name 'covfefe'
+    image 'fruit.png'
 
     factory :ingredient_with_recipes do
       transient do
