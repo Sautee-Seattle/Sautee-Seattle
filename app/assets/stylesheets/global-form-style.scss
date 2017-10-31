@@ -16,7 +16,8 @@
     }
 
     textarea {
-      height: 200px;
+      box-sizing: border-box;
+      height: 15em;
       padding: 0.5em;
     }
 
