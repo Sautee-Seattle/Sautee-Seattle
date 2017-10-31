@@ -1,5 +1,11 @@
 <header>
-  <h1><a href="/">Sautee' Seattle</a></h1>
+  <h1><a href="/">
+    <% if request.path == "/" %>
+      Select Season
+    <% else %>
+      Sautee' Seattle
+    <% end %>
+  </a></h1>
 
   <nav class="seasons">
     <ul>
