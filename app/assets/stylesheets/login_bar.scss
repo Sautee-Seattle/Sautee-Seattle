@@ -111,6 +111,7 @@ nav.login-nav {
   text-align: right;
 }
 
+
 // nav.login-nav form{
 //   text-align: center;
 //   margin-top: 2em;
@@ -141,4 +142,9 @@ span a {
 input {
   font-family: 'arapeyregular';
   font-size: 1.2em;
+}
+
+input#logout:hover,
+input#logout:focus {
+  color: gray;
 }
