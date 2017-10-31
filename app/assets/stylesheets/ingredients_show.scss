@@ -4,6 +4,9 @@
 
     li:hover {
       color: var(--green);
+      a {
+        color: var(--green);
+      }
     }
   }
 
@@ -15,10 +18,6 @@
     color: white;
     text-decoration: none;
     padding: 2px;
-
-    &:hover {
-      color: var(--green);
-    }
   }
 
   .bottom .contribute span {
