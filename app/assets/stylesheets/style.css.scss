@@ -72,6 +72,10 @@ h1, h2, h3 {
   border-radius: 50%;
 }
 
+img, embed, object, iframe {
+  max-width: 100%;
+}
+
 main {
   width: 100%;
   background-color: var(--lalala);
