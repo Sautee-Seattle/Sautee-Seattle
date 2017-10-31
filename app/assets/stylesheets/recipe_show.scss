@@ -1,0 +1,28 @@
+#recipe-show {
+  .left-content {
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-family: 'arapeyregular';
+
+      a {
+        color: gold;
+        text-decoration: none;
+        font-family: 'arapeyregular';
+      }
+    }
+  }
+
+  .right-content {
+    .ingredient-name {
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+    }
+  }
+}

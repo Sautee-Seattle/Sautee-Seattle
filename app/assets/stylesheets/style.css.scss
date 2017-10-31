@@ -28,6 +28,14 @@
   --fall: #f15a24;
 }
 
+.manifesto-img {
+  margin-top: 2em;
+  width: 350px;
+}
+
+.salad {
+  text-align: center;
+}
 
 body, body * {
   padding: 0;
@@ -37,7 +45,7 @@ body, body * {
 body {
   line-height: 1.5em;
   box-sizing: border-box;
-  border: 25px solid #fff;
+  border: 35px solid #fff;
   color: #fff;
   line-height: 1.65em;
   font-family: 'arapeyregular';
@@ -53,15 +61,33 @@ h1, h2, h3 {
 //   border: 1px solid red;
 // }
 
+.season-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  margin-top: 4em;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+img, embed, object, iframe {
+  max-width: 100%;
+}
+
 main {
   width: 100%;
   background-color: var(--lalala);
+  border-bottom: 35px solid #fff;
+  padding-bottom: 2em;
+  overflow: hidden;
 }
 
 section {
   width: 52%;
   margin: 0 auto;
-  overflow: hidden;
+  padding-bottom: 2em;
 }
 
 article {
@@ -69,12 +95,12 @@ article {
   overflow: hidden;
 }
 
-aside {
-  border: 1px solid red;
-}
-
 h1, h2 {
   margin: 1em 0em 1em 0em;
+}
+
+h1 {
+  margin-top: 5em;
 }
 
 li {
@@ -87,6 +113,25 @@ p {
 
 span {
   font-family: 'arapeyitalic';
+}
+
+#manifesto h2 {
+  text-align: center;
+}
+
+#manifesto h4 {
+  font-family: 'arapeyitalic';
+  font-size: 1.6em;
+  line-height: 2em;
+  font-weight: 100;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#manifesto p {
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.5em;
 }
 
 /* end general styles */
@@ -105,12 +150,24 @@ span {
   font-family: 'elliotsixregular';
 }
 
-img, embed, object, video, iframe {
-  max-width: 100%;
-}
-
 footer {
   clear: both;
+}
+
+#home-page {
+  background-image: url('grocery-background.jpeg');
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+  margin: 2.65em;
+  width: 95%;
+}
+
+#home-page h1 {
+  font-size: 3em;
+  // padding-top: 5.75em;
 }
 
 /* season ingredient list */
@@ -127,16 +184,20 @@ footer {
   color: #fff;
 }
 
-.round-image {
-  border-radius: 50%;
+
+
+.Summer {
+  background-color: var(--summer);
 }
 
-@media screen and (max-width: 1350px) {
-  section {
-    width: 90%;
-  }
+.Winter {
+  background-color: var(--winter);
 }
 
-img {
-  width: 225px;
+.Fall {
+  background-color: var(--fall);
+}
+
+.Spring {
+  background-color: var(--spring);
 }
