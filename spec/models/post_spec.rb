@@ -31,14 +31,14 @@ RSpec.describe Post, type: :model do
       expect(post.url).to eq("#")
     end
 
-    it "should default url to pan.png if post_type is recipe" do
+    it "should default url to pan.jpeg if post_type is recipe" do
       post = create(:post, post_type: "recipe", url: nil)
-      expect(post.url).to eq("pan.png")
+      expect(post.url).to eq("pan.jpeg")
     end
 
     it "should default url if url is set to empty string" do
       post = create(:post, post_type: 'recipe', url: "")
-      expect(post.url).to eq("pan.png")
+      expect(post.url).to eq("pan.jpeg")
     end
 
     it "should not change url if it has been explicitly delcared" do
