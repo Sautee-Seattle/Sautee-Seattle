@@ -46,5 +46,14 @@
 
 .season-ingredient-partial-cell {
   margin-left: 0px;
+  border: 2px var(--lalala) solid;
+}
+
+.season-ingredient-partial-cell:hover {
+  border: 2px var(--green) solid;
+}
+
+.season-ingredient-partial-cell:hover a {
+  color: var(--green);
 }
 /* END Partial _Season_Ingredient */
