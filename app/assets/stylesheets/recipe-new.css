@@ -1,7 +1,11 @@
-.new_post{
-  display: grid;
+aside.new_post{
+  width: 100%;
 }
 .recipe-ingredients{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.recipe-ingredients .label, .recipe-ingredients input{
+  width: auto;
 }
