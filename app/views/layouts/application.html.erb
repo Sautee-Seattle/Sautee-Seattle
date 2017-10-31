@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sautee Seattle | Eating Seasonall in Seattle WA</title>
+    <title>Sautee Seattle | Eating Seasonal in Seattle WA</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,9 +12,11 @@
   <body>
 
     <main>
-      <%= render "shared/login_bar" %>
-      <%= render "shared/home-page" %>
-      <%= yield %>
+      <div class="wrapper">
+        <%= render "shared/login_bar" %>
+        <%= render "shared/home-page" %>
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
