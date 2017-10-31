@@ -38,7 +38,7 @@ class Post < ApplicationRecord
   before_validation do
     if !self.url || self.url == ""
       if is_recipe?
-        self.url = "pan.png"
+        self.url = "cooking.jpeg"
       else
         self.url = "#"
       end
