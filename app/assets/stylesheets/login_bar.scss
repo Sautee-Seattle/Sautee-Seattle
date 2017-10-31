@@ -10,7 +10,6 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "logo season user";
-  grid-gap: 5px;
   height: 40px;
 }
 
@@ -51,6 +50,16 @@ nav {
   vertial-align: middle;
 }
 
+
+.login-nav #logout {
+  font-family: 'elliotsixregular';
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
 nav.logo-nav {
   grid-area: logo;
   text-align: left;
@@ -70,13 +79,44 @@ nav.seasons {
 nav.login-nav {
   grid-area: user;
   text-align: right;
-  padding-right: 2.55em;
-  margin-top: 2em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "spot1 spot2";
 }
 
-.login-nav {
-  text-align: center;
+.spot1 {
+  grid-area: spot1;
+  margin: 0;
+  padding: 0;
+  padding-right: 6em;
+  margin-top: 2em;
+  text-align: right;
 }
+
+.spot1-login {
+  grid-area: spot1;
+  margin: 0;
+  padding: 0;
+  padding-right: 8em;
+  margin-top: 2em;
+  text-align: right;
+}
+
+.spot2 {
+  grid-area: spot2;
+  margin: 0;
+  padding: 0;
+  padding-right: 2.55em;
+  margin-top: 2em;
+  text-align: right;
+}
+
+// nav.login-nav form{
+//   text-align: center;
+//   margin-top: 2em;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .season a {
   display: block;
@@ -101,13 +141,4 @@ span a {
 input {
   font-family: 'arapeyregular';
   font-size: 1.2em;
-}
-
-.login-nav #logout {
-  font-family: 'elliotsixregular';
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1em;
 }
