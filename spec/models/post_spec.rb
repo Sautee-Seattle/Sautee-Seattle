@@ -3,8 +3,14 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe "validations" do
     it { should validate_presence_of(:post_type) }
-    it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:body) }
+    it 'should have a title' do
+      post = build(:post, title: "")
+      expect(post).to_not be_valid
+    end
+    it 'should have a body' do
+      post = build(:post, body: "")
+      expect(post).to_not be_valid
+    end
     it { should validate_uniqueness_of(:title).scoped_to(:post_type) }
   end
 
