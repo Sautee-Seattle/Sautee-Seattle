@@ -11,6 +11,12 @@ RSpec.describe User, type: :model do
     it { should allow_value(nil).for(:bio) }
     it { should validate_uniqueness_of(:username) }
     it { should validate_uniqueness_of(:email) }
+    it 'should default image to default_profile.png on save' do
+      expect(user1.image).to eq "default_profile.png"
+    end
+    it "should not have an image when user is not yet saved" do
+      expect(user2.image).to be nil
+    end
   end
 
   describe "virtual attributes" do
