@@ -1,0 +1,33 @@
+footer {
+  --main-link-color: white;
+  --main-nav-bg-color: #343a40;
+  --main-nav-li-hover-bg-color: black;
+}
+.footer-image {
+  padding-top: 10px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+footer p {
+  font-family: 'elliotsixregular';
+  margin: 0;
+}
+
+footer ul {
+  display: grid;
+  list-style:none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0;
+}
+
+footer li {
+  display: inline-grid;
+  font-family: 'elliotsixregular';
+  font-size: 0.5em;
+  margin: 0;
+}
