@@ -1,0 +1,43 @@
+.global-form-style {
+  h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  aside {
+    width: 60%;
+    margin: auto;
+
+    * {
+      width: 100%;
+    }
+
+    .label {
+      margin-top: 1.8em;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      height: 15em;
+      padding: 0.5em;
+    }
+
+    input {
+      box-sizing: border-box;
+      padding: 0.5em;
+    }
+
+    input[type='submit'] {
+      padding: .8em;
+      margin-top: 1.8em;
+      font-size: 1.25em;
+      border: 3px white solid;
+      background: var(--lalala);
+      color: white;
+      font-family: 'elliotsixregular';
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
