@@ -27,13 +27,18 @@
 
 
 /* START Show Seasons */
+.seasons-show-header h1 {
+  font-size: 2.5em;
+  margin-top: 3.5em;
+}
+
 .seasons-show-header p {
   padding: 0em 1.25em;
 }
 
 .seasons-show-header h2 {
   text-align: left;
-  padding-left: 0.8em;
+  font-size: 2em;
 }
 
 /* END Show Seasons */
@@ -46,5 +51,19 @@
 }
 
 .season-ingredient-partial-cell {
+  margin-left: 0px;
+  border: 2px var(--lalala) solid;
+}
+
+.season-ingredient-partial-cell > a {
+  font-size: 0.75em;
+}
+
+.season-ingredient-partial-cell:hover {
+  border: 2px var(--green) solid;
+}
+
+.season-ingredient-partial-cell:hover a {
+  color: var(--green);
 }
 /* END Partial _Season_Ingredient */
