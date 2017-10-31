@@ -24,7 +24,7 @@
     </p>
 
     <aside>
-      <img class="round-image" src="<%= @recipe.url %>" alt="recipe image">
+      <%= image_tag @recipe.url, alt: 'recipe image', class: "round-image" %>
     </aside>
   </article>
 </section>
