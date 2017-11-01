@@ -29,7 +29,7 @@
 /* START Show Seasons */
 .seasons-show-header h1 {
   font-size: 2.5em;
-  margin-top: 3.5em;
+  margin-top: 0;
 }
 
 .seasons-show-header p {
@@ -40,6 +40,10 @@
   text-align: left;
   font-size: 2em;
   padding-left: 10px;
+}
+
+.schmear-image {
+  
 }
 
 /* END Show Seasons */
