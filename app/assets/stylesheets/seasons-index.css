@@ -24,8 +24,8 @@ article#home-page h1 {
   text-decoration: none;
 }
 
-section a:hover,
-section a:focus {
+span a:hover,
+span a:focus {
   transition: 0.2s;
   font-size: 2em;
 }
