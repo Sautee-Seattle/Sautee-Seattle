@@ -74,6 +74,8 @@ h1, h2, h3 {
 
 .round-image {
   border-radius: 50%;
+  min-height: 300px;
+  min-width: 300px;
 }
 
 img, embed, object, iframe {
