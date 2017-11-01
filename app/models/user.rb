@@ -5,7 +5,7 @@ class User < ApplicationRecord
     styles: {
       square: '250x250>',
       cropped: '250x250#',
-    }, default_url: 'default_url.png'
+    }, default_url: 'https://s3-us-west-2.amazonaws.com/seattle-saute/default_profile.png'
 
 
 
@@ -24,9 +24,9 @@ class User < ApplicationRecord
     posts.select {|post| post.post_type == "location"}
   end
 
-  # before_validation do
-  #   if !self.image_file_name || self.image_file_name == ""
-  #     self.image_file_name = "https://s3-us-west-2.amazonaws.com/seattle-saute/default_profile.png"
-  #   end
-  # end
+  before_validation do
+    if !self.image_file_name || self.image_file_name == ""
+      self.image=("https://s3-us-west-2.amazonaws.com/seattle-saute/default_profile.png")
+    end
+  end
 end
