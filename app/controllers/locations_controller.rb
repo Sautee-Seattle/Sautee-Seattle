@@ -28,6 +28,7 @@ class LocationsController < ApplicationController
   end
 
   def destroy
+    p params
     location = Post.find(params[:id])
     user = User.find(location.user.id)
     location.destroy
