@@ -64,8 +64,5 @@ RSpec.describe LocationsController, type: :controller do
        delete :destroy, params: {id: new_post.id}
        expect(response).to redirect_to user_path(user)
      end
-
-
   end
-
 end
