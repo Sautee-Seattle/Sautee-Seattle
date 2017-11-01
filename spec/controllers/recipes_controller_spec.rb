@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe RecipesController, type: :controller do
   let(:ingredient) {create(:ingredient_with_recipes)}
   let(:user) { create(:user) }
+  let!(:new_post) {Post.create!(post_type: "recipe", title: "Post number 1", body: "This is post 1's body!", url: "#", user: user)}
+
 
   describe "#index" do
     before(:each) {get :index, params: {ingredient_id: ingredient.id}}
@@ -53,5 +55,20 @@ RSpec.describe RecipesController, type: :controller do
       post :create, params: { ingredient_id: ingredient.id, post: {post_type: 'recipe', title: 'hassan scramble'}, ingredients: { ingredient_1.name =>"on" } }, session: { user_id: user.id }
       expect(response).to render_template :new
     end
+  end
+  context "resipes#destroy" do
+    it "responds with status code 302" do
+      delete :destroy, params: {id: new_post.id}
+      expect(response.status).to eq 302
+    end
+
+     it "deletes the resipe" do
+       expect{delete :destroy, params: {id: new_post.id}}.to change(Post,:count).by(-1)
+     end
+
+     it "redirects to users#show" do
+       delete :destroy, params: {id: new_post.id}
+       expect(response).to redirect_to user_path(user)
+     end
   end
 end
