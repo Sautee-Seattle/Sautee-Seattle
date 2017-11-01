@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
   end
 
   def show
-    
+    render :show
   end
 
   def destroy
