@@ -13,10 +13,18 @@
 
   li, p {
     font-size: 1.2em;
+    text-decoration: none;
+    list-style: none;
   }
 
   a:link, a:visited {
     text-decoration: none;
     color: white;
   }
+
+  a:hover, a:focus {
+    text-decoration: none;
+    color: gray;
+  }
+
 }
