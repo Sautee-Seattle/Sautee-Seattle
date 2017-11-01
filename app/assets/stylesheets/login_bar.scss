@@ -17,6 +17,9 @@ header ul {
   display: grid;
   list-style:none;
 }
+.seasons ul {
+  grid-gap: 2em;
+}
 
 header li {
   grid-row: 1;
