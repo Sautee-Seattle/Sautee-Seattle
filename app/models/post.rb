@@ -17,22 +17,27 @@ class Post < ApplicationRecord
   end
 
   def title_validation
-   if is_location? && !title.present?
-     errors[:base] << "Name can't be blank."
-   end
+    if is_location? && !title.present?
+      errors[:base] << "Name can't be blank."
+    end
+
     if is_recipe? && !title.present?
       errors[:base] << "Recipe name can't be blank."
     end
-
   end
 
   def body_validation
     if is_location? && !body.present?
       errors[:base] << "Address can't be blank."
     end
+
     if is_recipe? && !body.present?
       errors[:base] << "Directions can't be blank."
     end
+  end
+
+  def html_recipe
+    self.body.gsub(/\n/, '<br/>')
   end
 
   before_validation do

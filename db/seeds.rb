@@ -56,6 +56,7 @@ user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pe
 User.create(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
 
 recipe = Post.create(post_type: 'recipe', title: "Apple Rhubarb Pie", body: "Ingredients:\n
+\n
 10 Apples,\n
 2 Stalks Rhubarb,\n
 2 T Cinnamon,\n
@@ -102,8 +103,8 @@ apples.posts << recipe
 apples.posts << location
 
 recipe.ingredients = []
-recipe.ingredients << Ingredient.find_by_name("Rhubarb")
 recipe.ingredients << Ingredient.find_by_name("Apples")
+recipe.ingredients << Ingredient.find_by_name("Rhubarb")
 
 
 
