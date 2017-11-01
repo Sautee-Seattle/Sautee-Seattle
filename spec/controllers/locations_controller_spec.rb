@@ -49,23 +49,4 @@ RSpec.describe LocationsController, type: :controller do
       expect(response).to redirect_to ingredient_path(ingredient)
     end
   end
-
-  describe "DELETE destroy" do
-
-     it "deletes the location" do
-       # post :create, session: {user_id: user.id}
-       expect{
-         delete :destroy
-       }.to change(Post,:count).by(-1)
-     end
-
-     it "redirects to locations#index" do
-       # post :create, session: {user_id: user.id}
-       delete :destroy, id: new_post
-       response.should redirect_to locations_url
-     end
-
-
-  end
-
 end
