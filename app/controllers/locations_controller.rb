@@ -27,6 +27,10 @@ class LocationsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   def destroy
     location = Post.find(params[:id])
     user = User.find(location.user.id)

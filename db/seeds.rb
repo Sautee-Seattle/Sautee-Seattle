@@ -52,7 +52,8 @@ while Season.all.length < 4
 end
 ###############################################################################
 user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
-User.create(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+
+user2 = User.create(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
 User.create(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
 
@@ -75,6 +76,8 @@ Directions:\n
 user: user);
 
 location = Post.create(post_type: 'location', title: "West Seattle Farmer's Market", body: "44th Ave SW & SW Alaska St, Seattle, WA 98116", url: "seattlefarmersmarkets.org/markets/west-seattle", user: user)
+
+location2 = Post.create(post_type: 'location', title: "Cool Farmer's Market", body: "44th Ave SW & SW Alaska St, Seattle, WA 98116", url: "seattlefarmersmarkets.org/markets/west-seattle", user: user)
 
 10.times do
   User.create(username: Faker::Internet.unique.user_name, email: Faker::Internet.unique.email, password: Faker::Internet.password, bio: Faker::Lorem.paragraph)
