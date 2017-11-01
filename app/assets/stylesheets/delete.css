@@ -4,6 +4,6 @@
   color: #a94442!important;
 }
 
-.btn-delete:hover{
+li a.btn-delete:hover{
   color: red!important;
 }
