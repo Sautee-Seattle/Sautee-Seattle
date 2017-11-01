@@ -17,12 +17,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    p @user.image.url
     render :show
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :bio)
+    params.require(:user).permit(:username, :email, :password, :bio, :image)
   end
 end
