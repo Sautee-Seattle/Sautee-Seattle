@@ -1,4 +1,9 @@
 .btn-delete{
+  font-family: 'arapeyitalic';
+  padding-left: .5em;
+  color: #a94442!important;
+}
+
+.btn-delete:hover{
   color: red!important;
-  font-family: arial!important;
 }
