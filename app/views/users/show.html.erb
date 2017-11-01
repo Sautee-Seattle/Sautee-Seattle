@@ -8,7 +8,14 @@
       <h3>Recently Posted Locations</h3>
       <ul>
         <% @user.locations[0..5].each do |location| %>
-          <li><%= link_to location.title, "http://#{location.url}", target: '_blank' %></li>
+          <li>
+            <% if @user.id == session[:user_id] %>
+            <%= link_to 'x', location_path(location), :method => :delete,
+            :class => "btn-delete",
+              data: {confirm: "Are you sure?"} %>
+            <% end %>
+            <%= link_to location.title, "http://#{location.url}", target: '_blank' %>
+          </li>
         <% end %>
       </ul>
     </aside>

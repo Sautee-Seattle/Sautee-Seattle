@@ -27,6 +27,13 @@ class LocationsController < ApplicationController
     end
   end
 
+  def destroy
+    location = Post.find(params[:id])
+    user = User.find(location.user.id)
+    location.destroy
+    redirect_to user_path(user)
+  end
+
   private
 
   def post_params
@@ -35,5 +42,4 @@ class LocationsController < ApplicationController
     strong_params[:user] = user
     strong_params
   end
-
 end
