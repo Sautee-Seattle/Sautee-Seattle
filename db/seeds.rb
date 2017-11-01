@@ -50,22 +50,89 @@ while Season.all.length < 4
   associate_produce(summer_produce_data, summer)
   associate_produce(fall_produce_data, fall)
 end
-  ###############################################################################
-User.create(username: "b", email: Faker::Internet.unique.email, password: "b", bio: Faker::Lorem.paragraph)
+###############################################################################
+user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+
+User.create(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
+
+recipe = Post.create(post_type: 'recipe', title: "Apple Rhubarb Pie", body: "Ingredients:\n
+\n
+10 Apples,\n
+2 Stalks Rhubarb,\n
+2 T Cinnamon,\n
+1 C Sugar,\n
+2 T Lemon Juice,\n
+Pie Crust\n
+\n
+Directions:\n
+\n
+1. Cut apples and rhubarb into bite-size chunks\n
+2. Mix in all other ingredients (excluding pie crust)\n
+3. Pour filling into pie Crust\n
+4. Bake at 350°F for 35 minutes\n
+5. Cool and enjoy\n",
+user: user);
+
+location = Post.create(post_type: 'location', title: "West Seattle Farmer's Market", body: "44th Ave SW & SW Alaska St, Seattle, WA 98116", url: "seattlefarmersmarkets.org/markets/west-seattle", user: user)
 
 10.times do
   User.create(username: Faker::Internet.unique.user_name, email: Faker::Internet.unique.email, password: Faker::Internet.password, bio: Faker::Lorem.paragraph)
 end
 
-100.times do
-  Post.create!(post_type: "location", title: Faker::Food.unique.spice, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
+25.times do
+  Post.create!(post_type: "location", title: Faker::Company.unique.name, body: Faker::Lorem.paragraph, user: User.all.sample)
 end
 
-100.times do
-  Post.create!(post_type: "recipe", title: Faker::Coffee.unique.blend_name, body: Faker::Lorem.paragraph, user: User.all.sample, ingredients: [Ingredient.all.sample])
+25.times do
+  Post.create!(post_type: "recipe", title: Faker::Food.unique.dish, body: Faker::Lorem.paragraph, user: User.all.sample)
 end
 
-user = User.create(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
-user2 = User.create(username: 'Jerod', email: 'jerod@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+Ingredient.all.each do |ingredient|
+  ingredient.posts << Post.where(post_type: 'location').sample(1 + rand(2))
+  ingredient.posts << Post.where(post_type: 'recipe').sample(1 + rand(7))
+end
 
-recipe = Post.create(post_type: 'recipe', title: 'beets on hams', body: 'put the beet on the ham and shake it all up! Nick says I approve :)', url: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Ispahan_Macaron.jpg', user: user);
+# makes sure apples have 8 recipes and 3 locations
+apples = Ingredient.find_by_name("Apples")
+apples.posts << Post.where(post_type: 'recipe').sample(8)
+apples.posts << Post.where(post_type: 'location').sample(2)
+
+
+# makes sure apples has Clera's recipe and location
+apples.posts << recipe
+apples.posts << location
+
+recipe.ingredients = []
+recipe.ingredients << Ingredient.find_by_name("Apples")
+recipe.ingredients << Ingredient.find_by_name("Rhubarb")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#

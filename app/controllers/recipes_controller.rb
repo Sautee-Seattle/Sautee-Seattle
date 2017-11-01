@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Post.find(params[:id])
+    @body = @recipe.html_recipe
   end
 
   def new
