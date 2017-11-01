@@ -8,6 +8,7 @@
 
   h2 {
     font-size: 2em;
+    padding-left: 10px;
   }
 
   .recipe-list {
@@ -15,12 +16,15 @@
     ul {
       list-style: none;
       li {
-        margin-left: 0px;
+        margin: 1em 0 1em 0;
+        padding: 1em 0 1em 10px;
         border: 2px var(--lalala) solid;
 
         a {
           color: white;
           text-decoration: none;
+          font-size: 1.3em;
+          font-family: 'elliotsixregular'
         }
 
         &:hover {
