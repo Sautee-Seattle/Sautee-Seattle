@@ -1,7 +1,13 @@
 <header>
   <nav class="logo-nav">
     <ul>
-      <li><a href="/">Sautee' Seattle</a></li>
+      <li><a href="/">
+        <% if request.path == "/" %>
+          Select a Season
+        <% else %>
+          Sautee' Seattle
+        <% end %>
+        </a></li>
     </ul>
   </nav>
 
