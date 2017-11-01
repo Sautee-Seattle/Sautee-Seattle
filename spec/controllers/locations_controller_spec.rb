@@ -49,5 +49,4 @@ RSpec.describe LocationsController, type: :controller do
       expect(response).to redirect_to ingredient_path(ingredient)
     end
   end
-
 end

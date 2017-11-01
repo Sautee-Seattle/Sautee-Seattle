@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :locations, only: [:index, :create, :new]
   end
 
+  resources :locations, only: [:destroy]
   resources :templates, only: [:show]
 
   get    '/login',   to: 'sessions#new'
