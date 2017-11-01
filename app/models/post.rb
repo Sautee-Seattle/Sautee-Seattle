@@ -37,7 +37,7 @@ class Post < ApplicationRecord
   end
 
   def html_recipe
-    self.body.gsub(/\n/, '<br/>')
+    self.body.gsub(/\n/, "<p><p/>")
   end
 
   before_validation do
