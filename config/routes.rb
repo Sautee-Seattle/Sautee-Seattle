@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   end
 
   resources :seasons , only: [:index, :show]
-  resources :recipes, only: [:show]
+  resources :recipes, only: [:show, :destroy]
   resources :ingredients, only: [:show] do
     resources :recipes, only: [:create, :new, :index]
     resources :locations, only: [:index, :create, :new]
   end
 
+  resources :locations, only: [:destroy]
   resources :templates, only: [:show]
 
   get    '/login',   to: 'sessions#new'

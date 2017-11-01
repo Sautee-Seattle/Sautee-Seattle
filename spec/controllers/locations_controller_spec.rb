@@ -50,4 +50,19 @@ RSpec.describe LocationsController, type: :controller do
     end
   end
 
+  context "locations#destroy" do
+    it "responds with status code 302" do
+      delete :destroy, params: {id: new_post.id}
+      expect(response.status).to eq 302
+    end
+
+     it "deletes the location" do
+       expect{delete :destroy, params: {id: new_post.id}}.to change(Post,:count).by(-1)
+     end
+
+     it "redirects to users#show" do
+       delete :destroy, params: {id: new_post.id}
+       expect(response).to redirect_to user_path(user)
+     end
+  end
 end

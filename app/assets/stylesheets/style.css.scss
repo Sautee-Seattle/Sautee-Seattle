@@ -170,10 +170,12 @@ footer {
 
 #home-page {
   background-image: url('grocery-background.jpeg');
-  text-align: center;
+  min-height: 100%;
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
   height: 900px;
   margin: 2.65em;
   width: 95%;
@@ -194,4 +196,8 @@ footer {
 
 .Spring {
   background-color: var(--spring);
+}
+
+.recipe-break {
+  line-height: 50%;
 }

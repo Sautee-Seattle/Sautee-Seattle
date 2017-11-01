@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Post.find(params[:id])
+    @body = @recipe.html_recipe
   end
 
   def new
@@ -31,6 +32,13 @@ class RecipesController < ApplicationController
         render :new
       end
     end
+  end
+
+  def destroy
+    recipe = Post.find(params[:id])
+    user = User.find(recipe.user.id)
+    recipe.destroy
+    redirect_to user_path(user)
   end
 
   private
