@@ -9,7 +9,11 @@
       <ul>
         <% @ingredient.recipes.each do |recipe| %>
           <li>
-            <%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
+            <%= link_to user_recipe_path(recipe.user, recipe) do %>
+              <div>
+                <%= recipe.title %>
+              </div>
+            <% end %>
           </li>
         <% end %>
       </ul>
