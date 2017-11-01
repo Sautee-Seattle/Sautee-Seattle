@@ -1,16 +1,38 @@
 #recipes-posts-index {
   text-align: center;
+
+  h1 {
+    font-size: 2.5em;
+    margin-top: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+    padding-left: 10px;
+  }
+
   .recipe-list {
     text-align: left;
     ul {
       list-style: none;
       li {
-        margin-left: 0px;
-        border: medium white solid;
+        margin: 1em 0 1em 0;
+        padding: 1em 0 1em 10px;
+        border: 2px var(--lalala) solid;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.3em;
+          font-family: 'elliotsixregular'
+        }
 
         &:hover {
-          border: medium green solid;
-          color: green;
+          border: 2px green solid;
+
+          a {
+            color: green;
+          }
         }
       }
     }

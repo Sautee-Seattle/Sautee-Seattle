@@ -83,13 +83,13 @@ img, embed, object, iframe {
 main {
   width: 100%;
   background-color: var(--lalala);
-  border-bottom: 35px solid #fff;
   padding-bottom: 2em;
 }
 
 section {
   width: 52%;
   margin: 0 auto;
+  padding-top: 4em;
   padding-bottom: 2em;
   min-height: 800px;
 }
@@ -178,26 +178,6 @@ footer {
   margin: 2.65em;
   width: 95%;
 }
-
-#home-page h1 {
-  font-size: 3em;
-  // padding-top: 5.75em;
-}
-
-/* season ingredient list */
-
-.season-ingredient-partial-cell {
-  font-family: 'elliotsixregular';
-  font-size: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.season-ingredient-partial-cell a {
-  text-decoration: none;
-  color: #fff;
-}
-
 
 
 .Summer {
