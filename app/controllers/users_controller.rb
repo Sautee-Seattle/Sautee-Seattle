@@ -12,16 +12,11 @@ class UsersController < ApplicationController
     else
       @errors = @user.errors.full_messages
       render :new
-      p '*' * 100
-      p params[:user]
     end
   end
 
   def show
     @user = User.find(params[:id])
-    p @user.image.url
-    p '*' * 100
-    p params[:user]
     render :show
   end
 

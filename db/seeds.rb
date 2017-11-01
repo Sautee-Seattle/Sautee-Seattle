@@ -52,7 +52,6 @@ while Season.all.length < 4
 end
 ###############################################################################
 user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!', image: '')
-p "*" * 100
 User.create!(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
 User.create!(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)

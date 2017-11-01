@@ -5,7 +5,7 @@ class User < ApplicationRecord
     styles: {
       square: '250x250>',
       cropped: '250x250#',
-    }, default_url: 'https://s3-us-west-2.amazonaws.com/seattle-saute/default_profile.png'
+    }
 
 
 
@@ -13,7 +13,6 @@ class User < ApplicationRecord
 
   validates :username, :email, { presence: true, uniqueness: true }
   validates :password_digest, :image, { presence: true }
-  # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 
   def recipes
