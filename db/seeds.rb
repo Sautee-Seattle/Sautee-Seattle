@@ -33,8 +33,14 @@ while Season.all.length < 4
   ingredients = produce_data.values.flatten.uniq
   clean(ingredients)
 
+  ingredients = ingredients.sort { |a, b| a <=> b }
+
   ingredients.each do |ingredient|
-    Ingredient.create!(name: ingredient)
+    ingredient_url_name = ingredient.gsub(/\s/, "-")
+    ingredient_url_name = ingredient_url_name.gsub(/,/, "")
+    ingredient_url_name = ingredient_url_name.gsub(/-+/, "-")
+    puts ingredient_url_name
+    Ingredient.create!(name: ingredient, image: "https://s3-us-west-2.amazonaws.com/seattle-saute/ingredients/#{ingredient_url_name}.jpg")
   end
   #############################################################################
 
@@ -107,34 +113,3 @@ apples.posts << location
 recipe.ingredients = []
 recipe.ingredients << Ingredient.find_by_name("Apples")
 recipe.ingredients << Ingredient.find_by_name("Rhubarb")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
