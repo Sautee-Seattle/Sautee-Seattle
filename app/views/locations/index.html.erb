@@ -1,12 +1,15 @@
 <section>
 
-  <h1>More places to go...</h1>
+  <h1 class="location-index-h1">More places to go...</h1>
   <% @ingredient.locations.each do |location| %>
-  <div class="locations-index-all-locations">
-      <h3><a href="<%= location.url %>"><%= location.title %></a></h3>
-      <p><%= location.body %></p>
-      <p>Posted by: <%= link_to location.user.username, user_path(location.user) %></p>
-  </div>
+    <div class="locations-index-all-locations">
+        <h3 class="location-index-h3"><%= location.title %></h3>
+        <p class="locations-index-address"><%= location.body %></p>
+        <ul class="locations-index">
+          <li class="locations-index-posted">Posted by: <%= link_to location.user.username, user_path(location.user) %></li>
+          <li class="locations-index-map"><%= link_to 'map', location_path(location), :class => "btn-show" %></li>
+        </ul>
+    </div>
   <% end %>
 
 </section>
