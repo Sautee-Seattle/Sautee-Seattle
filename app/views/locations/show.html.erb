@@ -4,10 +4,7 @@
       <img class="mapped-locations-google-map-img"  src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=<%= ENV['GOOGLE_MAPS_KEY'] %>" alt="Google Image">
     </li>
     <li>
-      <p> <%= @all_the_things[0[0][0[0]]] %> </p>
-    </li>
-    <li>
-      <p> <%= @other_things[0][0] %> </p>
+      <p> <%= @all_the_things["results"][0]["address_components"]   %> </p>
     </li>
   </ul>
 </section>
