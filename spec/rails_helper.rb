@@ -74,6 +74,7 @@ RSpec.configure do |config|
 
   config.after(:all) do
     `rm -rf #{Rails.root}/public/system/users/images/*`
+    `rm -rf #{Rails.root}/public/system/posts/images/*`
   end
 
   config.around(:each) do |example|
