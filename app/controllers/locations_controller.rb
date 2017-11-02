@@ -31,13 +31,11 @@ class LocationsController < ApplicationController
 
   def show
     uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
-    response = Net::HTTP.get_response(uri)
 
+    response = Net::HTTP.get_response(uri)
+    @other_things = [{"number"=>"bob"}]
     @all_the_things = JSON.parse(response.body)
-    # JSON.parse(@all_the_things.body)
-    # @all_the_things.each do |item|
-    #   puts item
-    # end
+
     render :show
   end
 
