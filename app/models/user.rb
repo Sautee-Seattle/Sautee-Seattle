@@ -20,6 +20,10 @@ class User < ApplicationRecord
     posts.select {|post| post.post_type == "location"}
   end
 
+  def html_bio
+    self.bio.gsub(/\n/, "<p><p/>")
+  end
+
   before_validation do
     if !self.image_file_name || self.image_file_name == ""
       self.image=("https://s3-us-west-2.amazonaws.com/seattle-saute/default_profile.png")
