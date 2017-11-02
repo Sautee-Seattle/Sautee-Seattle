@@ -33,6 +33,10 @@ RSpec.describe RecipesController, type: :controller do
     it "the assigned instance variable has a type of recipe" do
       expect(assigns[:recipe].post_type).to eq 'recipe'
     end
+
+    it "assigns an instance variable of #body" do
+      expect(assigns[:body]).to_not be nil
+    end
   end
 
   describe "#new" do
