@@ -2,8 +2,14 @@
 
 #nav-mobile {
 	padding: 0.6250em 1.25rem;
-	background-color: #333;
+	background-color: var(--lalala);
 	color: #fff;
+}
+
+#nav-mobile li {
+	font-family: 'elliotsixregular';
+	font-size: 1.25em;
+	text-align: center;
 }
 
 #nav-mobile a:link,
@@ -33,5 +39,6 @@
 
 #toggle-icon {
 	display: block;
-	text-align: right;
+	text-align: left;
+	font-size: 1.85em;
 }

@@ -1,0 +1,20 @@
+<nav id="nav-mobile">
+    <a id="toggle-icon" href="javascript:;">&#9776;</a>
+    <ul id="toggle-list">
+      <li><a href="/seasons/Spring">Spring</a></li>
+      <li><a href="/seasons/Summer">Summer</a></li>
+      <li><a href="/seasons/Fall">Fall</a></li>
+      <li><a href="/seasons/Winter">Winter</a></li>
+      <% unless session[:user_id] %>
+        <li class="spot1-login"><%= link_to "login", login_path %> | </li> <li class="spot2"><%= link_to "register", new_user_path %></li>
+      <% else %>
+        <% if current_page?(user_path(User.find(session[:user_id]))) %>
+          <li class="spot1">Hello <%= User.find(session[:user_id]).username %></li>
+          <li class="spot2"><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
+        <% else %>
+           <li class=""><%= link_to "My Profile", user_path(User.find(session[:user_id])) %></li>
+           <li class=""><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
+        <% end %>
+      <% end %>
+    </ul>
+</nav>
