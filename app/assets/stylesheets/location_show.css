@@ -1,0 +1,36 @@
+h1.location-show-h1 {
+  margin-top: 0;
+  margin-bottom: .2em;
+  font-size: 2em;
+  text-align: center;
+}
+
+h3.location-show-h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+ul.maps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "left right";
+  grid-gap: .5em;
+  list-style: none;
+}
+
+li#map-far {
+  grid-area: left;
+}
+
+li#map-close {
+  grid-area: right;
+}
+
+img.mapped-locations-google-map-img {
+  min-width: 250px;
+  min-height: 250px;
+  border: gray solid 3px;
+  border-radius: 10%;
+}
