@@ -11,6 +11,12 @@ h3.location-show-h3 {
   text-align: center;
 }
 
+h4.location-show-h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
 ul.maps {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,12 +26,22 @@ ul.maps {
   list-style: none;
 }
 
+img:hover, img:focus {
+  text-decoration: none;
+  background-color: gray;
+  color: gray;
+}
+
 li#map-far {
   grid-area: left;
 }
 
 li#map-close {
   grid-area: right;
+}
+
+li#map-close:hover, li#map-close:focus, li#map-far:hover, li#map-far:focus {
+  opacity: .5;
 }
 
 img.mapped-locations-google-map-img {
