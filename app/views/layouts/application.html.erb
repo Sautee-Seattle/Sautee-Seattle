@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <%= javascript_include_tag 'application' %>
+
   </head>
   <body>
 
@@ -15,6 +16,20 @@
     <%= render "shared/spinner" %>
     <main>
       <div class="wrapper" <% if request.path == "/" %> hidden="hidden" <% end %>>
+
+<nav id="nav-mobile">
+    <a id="toggle-icon" href="javascript:;">&#9776;</a>
+    <ul id="toggle-list">
+    	<li><a href="javascript:;">Home</a></li>
+    	<li><a href="javascript:;">About</a></li>
+    	<li><a href="javascript:;">Products</a></li>
+    	<li><a href="javascript:;">Services</a></li>
+    	<li><a href="javascript:;">Testimonials</a></li>
+    	<li><a href="javascript:;">Contact</a></li>
+    </ul>
+</nav>
+
+
         <%= render "shared/login_bar" %>
         <%= render "shared/home-page" %>
         <%= yield %>
