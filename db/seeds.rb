@@ -33,6 +33,8 @@ while Season.all.length < 4
   ingredients = produce_data.values.flatten.uniq
   clean(ingredients)
 
+  ingredients = ingredients.sort { |a, b| a <=> b }
+
   ingredients.each do |ingredient|
     ingredient_url_name = ingredient.gsub(/\s/, "-")
     ingredient_url_name = ingredient_url_name.gsub(/,/, "")
@@ -111,34 +113,3 @@ apples.posts << location
 recipe.ingredients = []
 recipe.ingredients << Ingredient.find_by_name("Apples")
 recipe.ingredients << Ingredient.find_by_name("Rhubarb")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
