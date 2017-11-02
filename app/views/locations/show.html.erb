@@ -1,4 +1,6 @@
 <section>
+  <h1> <%= @post.title %> </h1>
+  <h3> <%= @address %> </h3>
   <ul>
     <li class="mapped-locations-google-map-li">
       <img class="mapped-locations-google-map-img"  src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @lat %>, <%= @lng %>&zoom=12&size=400x400&markers=color:green%7Clabel:%7C<%= @lat %>, <%= @lng %>&key=<%= ENV['GOOGLE_MAPS_KEY'] %>" alt="Google Image">
@@ -8,3 +10,5 @@
     </li>
   </ul>
 </section>
+
+{"results"=>[{"address_components"=>[{"long_name"=>"44th Avenue Southwest", "short_name"=>"44th Ave SW", "types"=>["route"]}, {"long_name"=>"Southwest", "short_name"=>"Southwest", "types"=>["neighborhood", "political"]}, {"long_name"=>"Seattle", "short_name"=>"Seattle", "types"=>["locality", "political"]}, {"long_name"=>"King County", "short_name"=>"King County", "types"=>["administrative_area_level_2", "political"]}, {"long_name"=>"Washington", "short_name"=>"WA", "types"=>["administrative_area_level_1", "political"]}, {"long_name"=>"United States", "short_name"=>"US", "types"=>["country", "political"]}], "formatted_address"=>"44th Ave SW, Seattle, WA, USA", "geometry"=>{"bounds"=>{"northeast"=>{"lat"=>47.5924226, "lng"=>-122.3854675}, "southwest"=>{"lat"=>47.5050243, "lng"=>-122.3905756}}, "location"=>{"lat"=>47.548513, "lng"=>-122.3886251}, "location_type"=>"GEOMETRIC_CENTER", "viewport"=>{"northeast"=>{"lat"=>47.5924226, "lng"=>-122.3854675}, "southwest"=>{"lat"=>47.5050243, "lng"=>-122.3905756}}}, "place_id"=>"ChIJV2SCRhxBkFQRKhxWuVyfQgk", "types"=>["route"]}], "status"=>"OK"}
