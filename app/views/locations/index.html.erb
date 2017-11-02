@@ -7,7 +7,7 @@
         <p class="locations-index-address"><%= location.body %></p>
         <ul class="locations-index">
           <li class="locations-index-posted">Posted by: <%= link_to location.user.username, user_path(location.user) %></li>
-          <li class="locations-index-map"><%= link_to 'map', location_path(location), :class => "btn-show" %></li>
+          <li class="locations-index-map"><%= link_to 'Show me a map', location_path(location), :class => "btn-show" %></li>
         </ul>
     </div>
   <% end %>

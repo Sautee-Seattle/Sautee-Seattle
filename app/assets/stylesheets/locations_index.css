@@ -6,8 +6,8 @@ h1.location-index-h1 {
 }
 
 h3.location-index-h3 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
   text-align: center;
 }
 
@@ -44,21 +44,23 @@ li.locations-index-map {
   list-style: none;
 }
 
+li.locations-index-posted a {
+  text-decoration: none;
+  color: gold;
+}
 
+li.locations-index-map a {
+  text-decoration: none;
+  color: forestgreen!important;
+}
 
-
-
-h3.location-index-h3 a:hover, a:focus {
+li.locations-index-posted a:hover, a:focus {
   text-decoration: none;
   color: gray;
 }
 
-p.locationmap a {
-  font-family: none;
-  font-family: 'arapeyitalic';
-  color: forestgreen!important;
-}
-
-p.location-map p:hover, p:focus {
+li.locations-index-map a:hover, a:focus {
+  text-decoration: none;
   color: lime!important;
+
 }
