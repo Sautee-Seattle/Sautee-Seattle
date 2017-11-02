@@ -3,10 +3,17 @@ class Post < ApplicationRecord
   has_many :ingredients, through: :ingredients_posts
   belongs_to :user
 
+  has_attached_file :image,
+    styles: {
+      square: '250x250>',
+      cropped: '250x250#',
+    }
+
   validates :post_type, :url, presence: true
   validate :title_validation
   validate :body_validation
   validates :title, uniqueness: {scope: :post_type}
+  validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 
   def is_recipe?
     post_type == "recipe"
@@ -42,10 +49,12 @@ class Post < ApplicationRecord
 
   before_validation do
     if !self.url || self.url == ""
-      if is_recipe?
-        self.url = "cooking.jpeg"
-      else
-        self.url = "#"
+      self.url = "#"
+    end
+
+    if is_recipe?
+      if !self.image_file_name || self.image_file_name == ""
+        self.image=("https://s3-us-west-2.amazonaws.com/seattle-saute/cooking.jpeg")
       end
     end
   end

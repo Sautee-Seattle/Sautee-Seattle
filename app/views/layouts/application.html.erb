@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sautee Seattle | Eating Seasonal in Seattle WA</title>
+    <title>Saute' Seattle | Eating Seasonal in Seattle WA</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <%= javascript_include_tag 'application' %>
   </head>
-  <!-- <body class="<%= "welcome" if controller_name == "seasons" %>">
-      <%= render "shared/login_bar" %> -->
   <body>
 
+
+    <%= render "shared/spinner" %>
     <main>
-      <div class="wrapper">
+      <div class="wrapper" <% if request.path == "/" %> hidden="hidden" <% end %>>
         <%= render "shared/login_bar" %>
         <%= render "shared/home-page" %>
         <%= yield %>

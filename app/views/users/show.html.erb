@@ -1,7 +1,7 @@
 <section id="user-profile">
   <article class="top">
     <aside class="left-content">
-      <%= image_tag @user.image, class: "round-image", size: "300x300", alt: "personal-bio" %>
+      <%= image_tag @user.image.url(:cropped), class: "round-image", size: "300x300", alt: "personal-bio" %>
     </aside>
 
     <aside class="right-content">
@@ -24,7 +24,7 @@
     <aside class="left-content">
       <h2><%= @user.username %></h2>
       <p>
-        <%= @user.bio %>
+        <%= raw @bio %>
       </p>
     </aside>
     <aside class="right-content">

@@ -1,5 +1,8 @@
 {
   "name": "Sautee-Seattle",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "spinners": "^1.2.2"
+  }
 }

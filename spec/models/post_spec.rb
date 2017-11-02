@@ -26,19 +26,19 @@ RSpec.describe Post, type: :model do
 
   describe "hooks" do
     let (:user) { create(:user) }
-    it "should default url to # if post_type is location" do
+    it "should always default url to #" do
       post = create(:post, post_type: "location", url: '')
       expect(post.url).to eq("#")
     end
 
-    it "should default url to cooking.jpeg if post_type is recipe" do
+    it "should default image to cooking.jpeg if post_type is recipe" do
       post = create(:post, post_type: "recipe", url: nil)
-      expect(post.url).to eq("cooking.jpeg")
+      expect(post.image_file_name).to eq("cooking.jpeg")
     end
 
-    it "should default url if url is set to empty string" do
-      post = create(:post, post_type: 'recipe', url: "")
-      expect(post.url).to eq("cooking.jpeg")
+    it "allows user to choose their own recipe image" do
+      post = create(:post, post_type: 'recipe', image_file_name: "https://static.pexels.com/photos/34950/pexels-photo.jpg")
+      expect(Post.find(post.id).image_file_name).to eq("https://static.pexels.com/photos/34950/pexels-photo.jpg")
     end
 
     it "should not change url if it has been explicitly delcared" do
@@ -62,6 +62,11 @@ RSpec.describe Post, type: :model do
     it "is_recipe? should return true if post is recipe" do
       recipe = create(:post, post_type: "recipe")
       expect(recipe).to be_is_recipe
+    end
+
+    it "#html_recipe returns recipe with newline replaced with paragraph tags" do
+      recipe = create(:post, post_type: "recipe")
+      expect(recipe.html_recipe.include?("\n")).to be false
     end
   end
 end

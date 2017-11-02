@@ -12,10 +12,14 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:username) }
     it { should validate_uniqueness_of(:email) }
     it 'should default image to default_profile.png on save' do
-      expect(user1.image).to eq "default_profile.png"
+      expect(user1.image_file_name).to eq "default_profile.png"
     end
     it "should not have an image when user is not yet saved" do
-      expect(user2.image).to be nil
+      expect(user2.image_file_name).to be nil
+    end
+    it "allows user to choose own image" do
+      user3 = create(:user, image_file_name: 'https://static.pexels.com/photos/34950/pexels-photo.jpg')
+      expect(User.find(user3.id).image_file_name).to eq 'https://static.pexels.com/photos/34950/pexels-photo.jpg'
     end
   end
 
@@ -30,6 +34,10 @@ RSpec.describe User, type: :model do
     it "has many recipes" do
       user_recipes = User.find(user.id).posts.select {|post| post.post_type == "recipe"}
       expect(user.recipes).to eq(user_recipes)
+    end
+
+    it "#html_bio returns bio with newline replaced with paragraph tags" do
+      expect(user.html_bio.include?("\n")).to be false
     end
   end
 

@@ -26,6 +26,46 @@
       padding: 0.5em;
     }
 
+    button {
+      background-color: blue;
+    }
+
+    input[type='file'] {
+      margin-top: .5em;
+      background: var(--lalala);
+      color: white;
+      font-family: 'elliotsixregular';
+      float: left;
+      font-size: .8em;
+      padding: .25em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .file-button {
+      margin-top: .5em;
+      border: 3px white solid;
+      background: var(--lalala);
+      color: white;
+      font-family: 'elliotsixregular';
+      float: left;
+      width: 300px;
+      font-size: .8em;
+      padding: .25em;
+      padding-top: 0;
+      z-index: 5;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #user-bio {
+      padding-top: 1.5em;
+    }
+
     input[type='submit'] {
       padding: .8em;
       margin-top: 1.8em;
