@@ -4,14 +4,18 @@ class UsersController < ApplicationController
   end
 
   def create
+    p '$' * 50
     @user = User.new(user_params)
-
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
-    else
-      @errors = @user.errors.full_messages
-      render :new
+    respond_to do |format|
+      if @user.save!
+        p '*'
+        session[:user_id] = @user.id
+        format.json { render json: @user, status: :created }
+        # redirect_to user_path(@user)
+      else
+        @errors = @user.errors.full_messages
+        render :new
+      end
     end
   end
 
