@@ -1,5 +1,5 @@
 // Wrap every letter in a span
-$(()=>{
+$(function() {
   $('.ml9 .letters').each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
