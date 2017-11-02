@@ -1,28 +1,25 @@
 h1.location-show-h1 {
   margin-top: 0;
-  margin-bottom: .2em;
+  margin-bottom: 0.5em;
   font-size: 2em;
   text-align: center;
 }
 
 h3.location-show-h3 {
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
   text-align: center;
 }
 
 h4.location-show-h4 {
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.3em;
   text-align: center;
 }
 
 ul.maps {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "left right";
-  grid-gap: .5em;
+  grid-template-columns: 1fr;
   list-style: none;
 }
 
@@ -32,15 +29,11 @@ img:hover, img:focus {
   color: gray;
 }
 
-li#map-far {
-  grid-area: left;
+li#map {
+  margin: auto;
 }
 
-li#map-close {
-  grid-area: right;
-}
-
-li#map-close:hover, li#map-close:focus, li#map-far:hover, li#map-far:focus {
+li#map:hover, li#map:focus {
   opacity: .5;
 }
 
