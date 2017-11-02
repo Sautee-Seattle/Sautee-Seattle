@@ -51,22 +51,23 @@ while Season.all.length < 4
   associate_produce(fall_produce_data, fall)
 end
 ###############################################################################
-user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: 'I love apple orchards, apple sauce, and roasted beets!', image: '')
+user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: "I love apple orchards, apple sauce, and roasted beets!\nHealth nut :)", image: '')
+
 User.create!(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
 User.create!(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
 
 recipe = Post.create!(post_type: 'recipe', title: "Apple Rhubarb Pie", body: "Ingredients:\n
-\n
+
 10 Apples,\n
 2 Stalks Rhubarb,\n
 2 T Cinnamon,\n
 1 C Sugar,\n
 2 T Lemon Juice,\n
 Pie Crust\n
-\n
+
 Directions:\n
-\n
+
 1. Cut apples and rhubarb into bite-size chunks\n
 2. Mix in all other ingredients (excluding pie crust)\n
 3. Pour filling into pie Crust\n

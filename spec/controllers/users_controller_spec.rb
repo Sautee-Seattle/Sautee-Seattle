@@ -12,6 +12,10 @@ RSpec.describe UsersController, type: :controller do
     it "assigns a user instance variable" do
       expect(assigns[:user].kind_of?(User)).to eq true
     end
+
+    it "assigns an instance variable of #bio" do
+      expect(assigns[:bio]).to_not be nil
+    end
   end
 
   describe "create" do
