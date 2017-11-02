@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
   private
   def recipe_params
     user = User.find(session[:user_id])
-    strong_params = params.require(:post).permit(:title, :body)
+    strong_params = params.require(:post).permit(:title, :body, :image)
     strong_params[:user] = user
     strong_params[:post_type] = 'recipe'
     strong_params

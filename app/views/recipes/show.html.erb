@@ -24,7 +24,7 @@
     </p>
 
     <aside>
-      <%= image_tag @recipe.url, size: "300x300", alt: 'recipe image', class: "round-image" %>
+      <%= image_tag @recipe.image.url(:cropped), size: "300x300", alt: 'recipe image', class: "round-image" %>
     </aside>
   </article>
 </section>

@@ -1,12 +1,13 @@
 <section class="global-form-style">
   <h1>add your recipe!</h1>
   <aside class="new_post">
-    <%= form_for @recipe, url: ingredient_recipes_path(@ingredient) do |f| %>
+    <%= form_for @recipe, url: ingredient_recipes_path(@ingredient), html: { multipart: true } do |f| %>
       <%= render "shared/errors", object: @recipe %>
       <div class="label">
         <h3><%= f.label :title, 'recipe name:' %></h3>
       </div>
       <%= f.text_field :title, required: true, autofocus: true %>
+
       <div class="label">
         <label><h3>tag ingredients:</h3></label>
       </div>
@@ -15,10 +16,19 @@
         <span><input type="checkbox" name="ingredients[<%= ing.name %>]" id="<%= ing.name %>" <% if @ingredient == ing %> checked <% end %> > <label for="<%= ing.name %>"><%= ing.name %></label></span>
         <% end %>
       </div>
+
       <div class="label">
         <h3><%= f.label :body, 'directions:' %></h3>
       </div>
       <%= f.text_area :body, required: true %>
+
+      <div class="label">
+        <label><h3>Recipe Image</h3></label>
+      </div>
+      <div>
+        <%= f.file_field :image %>
+      </div>
+
       <%= f.submit 'submit recipe' %>
     <% end %>
   </aside>
