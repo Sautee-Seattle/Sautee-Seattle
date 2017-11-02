@@ -34,7 +34,11 @@ while Season.all.length < 4
   clean(ingredients)
 
   ingredients.each do |ingredient|
-    Ingredient.create!(name: ingredient)
+    ingredient_url_name = ingredient.gsub(/\s/, "-")
+    ingredient_url_name = ingredient_url_name.gsub(/,/, "")
+    ingredient_url_name = ingredient_url_name.gsub(/-+/, "-")
+    puts ingredient_url_name
+    Ingredient.create!(name: ingredient, image: "https://s3-us-west-2.amazonaws.com/seattle-saute/ingredients/#{ingredient_url_name}.jpg")
   end
   #############################################################################
 
