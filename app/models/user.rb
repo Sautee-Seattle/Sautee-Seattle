@@ -1,13 +1,10 @@
 class User < ApplicationRecord
-
   has_secure_password
   has_attached_file :image,
     styles: {
       square: '250x250>',
       cropped: '250x250#',
     }
-
-
 
   has_many :posts, dependent: :destroy
 

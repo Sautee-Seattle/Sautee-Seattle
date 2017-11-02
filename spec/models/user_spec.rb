@@ -15,8 +15,7 @@ RSpec.describe User, type: :model do
       expect(user1.image_file_name).to eq "default_profile.png"
     end
     it "should not have an image when user is not yet saved" do
-      user3 = User.new(username: 'marlo', email: 'm@marlo.com', password: 'marlo')
-      expect(user3.image).to be nil
+      expect(user2.image_file_name).to be nil
     end
   end
 
