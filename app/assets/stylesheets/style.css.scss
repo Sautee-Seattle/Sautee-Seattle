@@ -36,6 +36,9 @@
 .manifesto-img {
   margin-top: 2em;
   width: 350px;
+  border-radius: 50%;
+  min-height: 300px;
+  min-width: 300px;
 }
 
 .salad {
@@ -74,6 +77,8 @@ h1, h2, h3 {
 
 .round-image {
   border-radius: 50%;
+  min-height: 300px;
+  min-width: 300px;
 }
 
 img, embed, object, iframe {

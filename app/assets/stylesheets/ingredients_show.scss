@@ -1,13 +1,27 @@
+
 #ingredient-show {
   ul {
     margin-top: 10px;
+  }
 
-    li:hover {
-      color: var(--green);
-      a {
-        color: var(--green);
-      }
-    }
+  li {
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .in-season-during {
+    font-family: 'elliotsixregular';
+    font-size: 0.8em;
+  }
+
+  .season-name {
+    font-size: 0.8em;
+    font-family: 'elliotsixregular';
   }
 
   h2 {
