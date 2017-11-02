@@ -34,6 +34,13 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    recipe = Post.find(params[:id])
+    user = User.find(recipe.user.id)
+    recipe.destroy
+    redirect_to user_path(user)
+  end
+
   private
   def recipe_params
     user = User.find(session[:user_id])

@@ -1,0 +1,27 @@
+.ml9 {
+  height: 100vh;
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+  background: var(--lalala);
+  text-align: center;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  font-family: 'elliotsixregular';
+  transform-origin: 50% 100%;
+  display: inline-block;
+  text-align: center!important;
+  font-size: .5em;
+  line-height: 1em;
+  margin-top: 350px;
+}
