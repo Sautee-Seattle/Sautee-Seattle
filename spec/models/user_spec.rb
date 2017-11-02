@@ -17,6 +17,10 @@ RSpec.describe User, type: :model do
     it "should not have an image when user is not yet saved" do
       expect(user2.image_file_name).to be nil
     end
+    it "allows user to choose own image" do
+      user3 = create(:user, image_file_name: 'https://static.pexels.com/photos/34950/pexels-photo.jpg')
+      expect(User.find(user3.id).image_file_name).to eq 'https://static.pexels.com/photos/34950/pexels-photo.jpg'
+    end
   end
 
   describe "virtual attributes" do
