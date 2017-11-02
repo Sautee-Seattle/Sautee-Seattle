@@ -3,7 +3,7 @@ FactoryBot.define do
     sequence(:username) {|n| "Jordan#{n}"}
     sequence(:email) {|n| "anil#{n}@jerod.com"}
     password 'password'
-    bio 'hams...nuff said.'
+    bio "hams...\nnuff said."
 
     factory :user_with_recipes_and_locations do
       transient do

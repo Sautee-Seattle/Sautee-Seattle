@@ -63,5 +63,10 @@ RSpec.describe Post, type: :model do
       recipe = create(:post, post_type: "recipe")
       expect(recipe).to be_is_recipe
     end
+
+    it "#html_recipe returns recipe with newline replaced with paragraph tags" do
+      recipe = create(:post, post_type: "recipe")
+      expect(recipe.html_recipe.include?("\n")).to be false
+    end
   end
 end

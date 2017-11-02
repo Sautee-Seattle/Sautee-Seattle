@@ -35,6 +35,10 @@ RSpec.describe User, type: :model do
       user_recipes = User.find(user.id).posts.select {|post| post.post_type == "recipe"}
       expect(user.recipes).to eq(user_recipes)
     end
+
+    it "#html_bio returns bio with newline replaced with paragraph tags" do
+      expect(user.html_bio.include?("\n")).to be false
+    end
   end
 
   describe "associations" do
