@@ -33,8 +33,14 @@ class LocationsController < ApplicationController
     uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
 
     response = Net::HTTP.get_response(uri)
-    @other_things = [{"number"=>"bob"}]
-    @all_the_things = JSON.parse(response.body)
+    hashed_response = JSON.parse(response.body)
+    # @all_the_things["results"][0]["address_components"][0]["long_name"]
+
+    @lat = hashed_response["results"][0]["geometry"]["location"]["lat"]
+    @lng = hashed_response["results"][0]["geometry"]["location"]["lng"]
+
+    # 37.4216548
+    # -122.0856374
 
     render :show
   end
