@@ -13,11 +13,13 @@ class User < ApplicationRecord
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 
   def recipes
-    posts.select {|post| post.post_type == "recipe"}
+    recipes = posts.select {|post| post.post_type == "recipe"}
+    recipes.sort { |a,b| a.title <=> b.title }
   end
 
   def locations
-    posts.select {|post| post.post_type == "location"}
+    locations = posts.select {|post| post.post_type == "location"}
+    locations.sort { |a,b| a.title <=> b.title }
   end
 
   def html_bio
