@@ -70,6 +70,7 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+    puts `rm -rf #{Rails.root}/public/system/users/images/*`
   end
 
   config.around(:each) do |example|
