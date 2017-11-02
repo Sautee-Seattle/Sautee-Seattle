@@ -1,7 +1,7 @@
 <section class="global-form-style">
   <h1>Create an Account!</h1>
   <aside>
-    <%= form_for @user, html: { class: 'form' } do |f| %>
+    <%= form_for @user, html: { class: 'form', multipart: true } do |f| %>
       <%= render "shared/errors" %>
 
       <div class="label">
@@ -10,24 +10,35 @@
       <div>
         <%= f.text_field :username, required: true, autofocus: true %>
       </div>
+
       <div class="label">
         <label><h3>Email</h3></label>
       </div>
       <div>
         <%= f.email_field :email, required: true %>
       </div>
+
       <div class="label">
         <label><h3>Password</h3></label>
       </div>
       <div>
         <%= f.password_field :password, required: true %>
       </div>
+
+      <div class="label">
+        <label><h3>Profile Picture</h3></label>
+      </div>
+      <div>
+        <%= f.file_field :image %>
+      </div>
+
       <div class="label">
         <label><h3>Bio</h3></label>
       </div>
       <div>
         <%= f.text_area :bio %>
       </div>
+
       <div>
         <%= f.submit 'Register' %>
       </div>
