@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   validates :username, :email, { presence: true, uniqueness: true }
   validates :password_digest, :image, { presence: true }
-  validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif', '/jpg']
+  validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 
   def recipes
     posts.select {|post| post.post_type == "recipe"}

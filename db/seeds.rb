@@ -56,7 +56,7 @@ User.create!(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love 
 
 User.create!(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
 
-recipe = Post.create(post_type: 'recipe', title: "Apple Rhubarb Pie", body: "Ingredients:\n
+recipe = Post.create!(post_type: 'recipe', title: "Apple Rhubarb Pie", body: "Ingredients:\n
 \n
 10 Apples,\n
 2 Stalks Rhubarb,\n
