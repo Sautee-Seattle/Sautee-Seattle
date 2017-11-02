@@ -30,10 +30,12 @@ class LocationsController < ApplicationController
   end
 
   def show
+    location = params[:id]
+    post = Post.find(location)
+    address = post.body
+    address.gsub!(/[\s]/, '+')
 
-
-
-    uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=44th+Ave+SW+&+SW+Alaska+St,+Seattle,+WA&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
+    uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
     #
     # uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
 
