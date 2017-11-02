@@ -1,0 +1,6 @@
+.fb-login-button, #status{
+  width: 300px;
+  height: 60px;
+  z-index: 500px;
+  background: yellow;
+}
