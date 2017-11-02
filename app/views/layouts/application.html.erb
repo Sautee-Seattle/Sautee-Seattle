@@ -13,8 +13,8 @@
 
 
     <%= render "shared/spinner" %>
-    <main <% if request.path == "/" %> hidden="hidden" <% end %>>
-      <div class="wrapper" >
+    <main>
+      <div class="wrapper" <% if request.path == "/" %> hidden="hidden" <% end %>>
         <%= render "shared/login_bar" %>
         <%= render "shared/home-page" %>
         <%= yield %>
