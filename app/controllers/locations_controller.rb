@@ -31,12 +31,10 @@ class LocationsController < ApplicationController
 
   def show
     location = params[:id]
-    post = Post.find(location)
-    address = post.body
+    @post = Post.find(location)
+    address = @post.body
     address.gsub!(/[\s]/, '+')
-
     uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
-
     response = Net::HTTP.get_response(uri)
     hashed_response = JSON.parse(response.body)
     @lat = hashed_response["results"][0]["geometry"]["location"]["lat"]
