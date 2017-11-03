@@ -9,12 +9,19 @@ RSpec.describe Ingredient, type: :model do
   end
 
   describe "virtual attributes" do
-    it "#recipes should return all posts of type 'recipe'" do
+    it "#recipes should return all posts of type 'recipe' alphabetized" do
       all_recipes = Ingredient.find(ingredient.id).posts.select {|post| post.post_type == "recipe"}
+
+      all_recipes =  all_recipes.sort { |a,b| a.title <=> b.title }
+
       expect(ingredient.recipes).to eq(all_recipes)
     end
-    it "#locations should return all posts of type 'location'" do
+
+    it "#locations should return all posts of type 'location' alphabetized" do
       all_locations = Ingredient.find(ingredient.id).posts.select {|post| post.post_type == "location"}
+
+      all_locations = all_locations.sort { |a,b| a.title <=> b.title }
+
       expect(ingredient.locations).to eq(all_locations)
     end
   end

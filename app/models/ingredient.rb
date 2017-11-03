@@ -8,11 +8,13 @@ class Ingredient < ApplicationRecord
   validates :name, :image, presence: true
 
   def recipes
-    posts.select {|post| post.post_type == "recipe"}
+    recipes = posts.select {|post| post.post_type == "recipe"}
+    recipes.sort { |a,b| a.title <=> b.title }
   end
 
   def locations
-    posts.select {|post| post.post_type == "location"}
+    locations = posts.select {|post| post.post_type == "location"}
+    locations.sort { |a,b| a.title <=> b.title }
   end
 
   before_validation do
