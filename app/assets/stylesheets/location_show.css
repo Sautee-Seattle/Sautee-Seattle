@@ -23,12 +23,6 @@ ul.maps {
   list-style: none;
 }
 
-img:hover, img:focus {
-  text-decoration: none;
-  background-color: gray;
-  color: gray;
-}
-
 li#map {
   margin: auto;
 }
