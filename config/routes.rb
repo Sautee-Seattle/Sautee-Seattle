@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :locations, only: [:index, :create, :new]
   end
 
-  resources :locations, only: [:destroy]
+  resources :locations, only: [:destroy, :show]
   resources :templates, only: [:show]
 
   get    '/login',   to: 'sessions#new'

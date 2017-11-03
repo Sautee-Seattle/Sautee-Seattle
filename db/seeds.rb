@@ -59,7 +59,7 @@ end
 ###############################################################################
 user = User.create!(username: 'Clera', email: 'apples@orchard.com', password: 'pear', bio: "I love apple orchards, apple sauce, and roasted beets!\nHealth nut :)", image: '')
 
-User.create!(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
+user2 = User.create!(username: 'b', email: 'b@orchard.com', password: 'b', bio: 'I love apple orchards, apple sauce, and roasted beets!')
 
 User.create!(username: "lovesbeets", email: Faker::Internet.unique.email, password: "pear", bio: Faker::Lorem.paragraph)
 
@@ -83,12 +83,22 @@ user: user);
 
 location = Post.create(post_type: 'location', title: "West Seattle Farmer's Market", body: "44th Ave SW & SW Alaska St, Seattle, WA 98116", url: "seattlefarmersmarkets.org/markets/west-seattle", user: user)
 
+location2 = Post.create(post_type: 'location', title: "Cool Farmer's Market", body: "44th Ave SW & SW Alaska St, Seattle, WA 98116", url: "seattlefarmersmarkets.org/markets/west-seattle", user: user)
+
 10.times do
   User.create(username: Faker::Internet.unique.user_name, email: Faker::Internet.unique.email, password: Faker::Internet.password, bio: Faker::Lorem.paragraph)
 end
 
+location_addresses = ["1912 Pike Pl, Seattle, WA 98101", "1124 Pike St, Seattle, WA 98101", "2401 Utah Ave S, Seattle, WA 98134", "823 1st Ave, Seattle, WA 98104", "102 Pike St, Seattle, WA 98101", "800 5th Ave, Seattle, WA 98104", "1021 SW Klickitat Way # 104, Seattle, WA 98134", "102 1st Ave S, Seattle, WA 98104", "1607 W Dravus St, Seattle, WA 98119", "
+5221 15th Ave NW, Seattle, WA 98107", "
+316 N 67th St, Seattle, WA 98103", "8319 Greenwood Ave N, Seattle, WA 98103", "
+7340 35th Ave NE, Seattle, WA 98115", "2650 NE 49th St, Seattle, WA 98105", "
+15332 Aurora Ave N, Seattle, WA 98133", "13025 Aurora Ave N, Seattle, WA 98133", "14330 Lake City Way NE, Seattle, WA 98125", "
+1251 N 205th St, Shoreline, WA 98133", "9801 Edmonds Way, Edmonds, WA 98020", "
+3418 Harbor Ave SW, Seattle, WA 98136", ]
+
 25.times do
-  Post.create!(post_type: "location", title: Faker::Company.unique.name, body: Faker::Lorem.paragraph, user: User.all.sample)
+  Post.create!(post_type: "location", title: Faker::Company.unique.name, body: location_addresses.sample, user: User.all.sample)
 end
 
 25.times do
