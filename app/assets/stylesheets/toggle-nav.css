@@ -1,0 +1,66 @@
+/* RESPONSIVE TOGGLE MAIN MENU */
+
+@media screen and (min-width: 1250px) {
+	#nav-mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	header {
+		display: none;
+	}
+}
+
+#nav-mobile {
+	padding: 0.6250em 1.25rem;
+	background-color: var(--lalala);
+	color: #fff;
+}
+
+#nav-mobile li {
+	font-family: 'elliotsixregular';
+	font-size: 1.25em;
+	text-align: center;
+}
+
+#nav-mobile a:link,
+#nav-mobile a:visited {
+	color: #ddd;
+	text-decoration: none;
+}
+#nav-mobile a:hover,
+#nav-mobile a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+#nav-mobile ul {
+	display: none;			/* nav list is closed on page load */
+	list-style: none;
+	margin: 0;
+	padding: 0.6250em 0 0 0;
+}
+
+#toggle-list a {
+	display: block;
+	padding: 0.6250em 0.6250rem;
+	border-bottom: 1px solid #666;
+	font-size: 1.2em;
+}
+
+#toggle-icon {
+	display: block;
+	text-align: left;
+	font-size: 1.85em;
+}
+
+#logout {
+	font-family: 'elliotsixregular';
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 1.25em;
+	padding-top: .65em;
+}
