@@ -28,11 +28,17 @@ RSpec.describe User, type: :model do
 
     it "has many locations" do
       user_locations = User.find(user.id).posts.select {|post| post.post_type == "location"}
+
+      user_locations = user_locations.sort { |a,b| a.title <=> b.title }
+
       expect(user.locations).to eq(user_locations)
     end
 
     it "has many recipes" do
       user_recipes = User.find(user.id).posts.select {|post| post.post_type == "recipe"}
+
+      user_recipes = user_recipes.sort { |a,b| a.title <=> b.title }
+
       expect(user.recipes).to eq(user_recipes)
     end
 
