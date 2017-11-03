@@ -13,11 +13,11 @@
   <article class="right-content">
     <h2>Seasonal Ingredients</h2>
     <p>
-      <% @recipe.ingredients.each do |ingredient| %>
+      <% @recipe.ingredients.each_with_index do |ingredient, i| %>
         <span class="ingredient-name">
           <%= link_to ingredient.name, ingredient_path(ingredient) %>
         </span>
-        <% if ingredient != @recipe.ingredients.last %>
+        <% if i != @recipe.ingredients.length - 1 %>
           <%= ' | ' %>
         <% end %>
       <% end %>

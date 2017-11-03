@@ -18,11 +18,17 @@
   }
 
   .right-content {
-    .ingredient-name {
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
+    p {
+      width: 100%;
+      text-align: center;
+      .ingredient-name {
+        margin: 0.75em;
+        a {
+          font-family: 'arapeyregular';
+          color: white;
+          text-decoration: none;
+          font-size: 0.75em;
+        }
       }
     }
 
