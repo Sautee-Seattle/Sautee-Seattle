@@ -1,6 +1,7 @@
 <nav id="nav-mobile">
     <a id="toggle-icon" href="javascript:;">&#9776;</a>
     <ul id="toggle-list">
+      <li><h2>Saute' Seattle</h2></li>
       <li><a href="/seasons/Spring">Spring</a></li>
       <li><a href="/seasons/Summer">Summer</a></li>
       <li><a href="/seasons/Fall">Fall</a></li>
@@ -13,7 +14,7 @@
           <li class="spot2"><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
         <% else %>
            <li class=""><%= link_to "My Profile", user_path(User.find(session[:user_id])) %></li>
-           <li class=""><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
+           <li class="logout"><%= button_to "logout", { action: 'destroy', controller: 'sessions' }, method: :delete, id: 'logout' %></li>
         <% end %>
       <% end %>
     </ul>

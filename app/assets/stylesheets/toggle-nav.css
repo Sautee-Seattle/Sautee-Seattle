@@ -1,5 +1,17 @@
 /* RESPONSIVE TOGGLE MAIN MENU */
 
+@media screen and (min-width: 1250px) {
+	#nav-mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	header {
+		display: none;
+	}
+}
+
 #nav-mobile {
 	padding: 0.6250em 1.25rem;
 	background-color: var(--lalala);
@@ -33,7 +45,7 @@
 #toggle-list a {
 	display: block;
 	padding: 0.6250em 0.6250rem;
-	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
 	font-size: 1.2em;
 }
 
@@ -41,4 +53,14 @@
 	display: block;
 	text-align: left;
 	font-size: 1.85em;
+}
+
+#logout {
+	font-family: 'elliotsixregular';
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 1.25em;
+	padding-top: .65em;
 }
