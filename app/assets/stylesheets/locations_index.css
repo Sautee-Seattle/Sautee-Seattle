@@ -54,12 +54,12 @@ li.locations-index-map a {
   color: forestgreen!important;
 }
 
-li.locations-index-posted a:hover, a:focus {
+li.locations-index-posted a:hover, li.locations-index-posted a:focus {
   text-decoration: none;
   color: gray;
 }
 
-li.locations-index-map a:hover, a:focus {
+li.locations-index-map a:hover, li.locations-index-posted a:focus {
   text-decoration: none;
   color: lime!important;
 
