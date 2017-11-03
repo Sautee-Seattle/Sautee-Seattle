@@ -145,12 +145,18 @@ input {
   font-weight: 100;
   width: 70%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #manifesto p {
   font-size: 1.2em;
   font-weight: 100;
   line-height: 1.5em;
+}
+
+#manifesto em {
+  font-size: 0.7em;
+  margin-left: 2em;
 }
 
 /* end general styles */
