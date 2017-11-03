@@ -1,3 +1,5 @@
+require 'net/http'
+
 class LocationsController < ApplicationController
 
   def index
@@ -25,6 +27,25 @@ class LocationsController < ApplicationController
     else
       redirect_to '/seasons'
     end
+  end
+
+  def show
+    location = params[:id]
+    @post = Post.find(location)
+    @address = @post.body
+    fixed_address = @address
+    fixed_address.gsub!(/[\s]/, '+')
+    uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{fixed_address}&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
+    response = Net::HTTP.get_response(uri)
+    hashed_response = JSON.parse(response.body)
+    if hashed_response["error_message"] != nil
+      sleep 1
+      response = Net::HTTP.get_response(uri)
+      hashed_response = JSON.parse(response.body)
+    end
+    @lat = hashed_response["results"][0]["geometry"]["location"]["lat"]
+    @lng = hashed_response["results"][0]["geometry"]["location"]["lng"]
+    render :show
   end
 
   def destroy

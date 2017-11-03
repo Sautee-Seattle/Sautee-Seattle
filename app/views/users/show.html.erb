@@ -11,6 +11,7 @@
           <li>
             <%= link_to location.title, "http://#{location.url}", target: '_blank' %>
             <% if @user.id == session[:user_id] %>
+              <%= link_to 'map', location_path(location), :class => "btn-show" %>
               <%= link_to 'remove', location_path(location), :method => :delete, :class => "btn-delete", data: {confirm: "Are you sure?"} %>
             <% end %>
           </li>
@@ -32,7 +33,7 @@
         <% @user.recipes[0..5].each do |recipe| %>
           <li><%= link_to recipe.title, user_recipe_path(recipe.user, recipe) %>
             <% if @user.id == session[:user_id] %>
-              <%= link_to 'x remove', recipe_path(recipe), :method => :delete, :class => "btn-delete", data: {confirm: "Are you sure?"} %>
+              <%= link_to 'remove', recipe_path(recipe), :method => :delete, :class => "btn-delete", data: {confirm: "Are you sure?"} %>
             <% end %></li>
         <% end %>
       </ul>

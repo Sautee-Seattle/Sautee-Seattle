@@ -22,10 +22,10 @@ article#home-page h1 {
 
 .title-back-top {
   text-decoration: none;
+  color: var(--main-body-color);
 }
 
-span a:hover,
-span a:focus {
+span a:hover {
   transition: 0.2s;
-  font-size: 2em;
+  color: grey;
 }
