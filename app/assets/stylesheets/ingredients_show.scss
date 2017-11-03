@@ -28,6 +28,12 @@
     font-size: 1.5em;
   }
 
+  .btn-show {
+    color: forestgreen!important;
+    padding-left: .5em;
+    font-family: 'arapeyitalic';
+  }
+
   a {
     color: white;
     text-decoration: none;
@@ -35,8 +41,12 @@
   }
 
   .top .left-content img {
-    height: 250px;
-    width: 250px;
+    width: 75%;
+    height: auto;
+    margin-bottom: 30px;
+    border: 3px #fff solid;
+    padding: 0.75em;
+    border-radius: 5px;
   }
 
   .bottom .contribute span {
