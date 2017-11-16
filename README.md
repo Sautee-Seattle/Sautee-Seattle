@@ -2,7 +2,7 @@
 
 Please check our [website](http://sautee-seattle.herokuapp.com/)
 
-A collaborative group project between [Blaine Anderson](https://github.com/BlaineA97), [John Simoni](https://github.com/JSimoni42), [Hassan AlMandil](https://github.com/Mandil), [Marlo Ito](https://github.com/Marloito) and [Nick Van Deren](https://github.com/Nickvanderen)
+A collaborative group project between [Blaine Anderson](https://github.com/BlaineA97), [Hassan AlMandil](https://github.com/Mandil), [John Simoni](https://github.com/JSimoni42), [Marlo Ito](https://github.com/Marloito) and [Nick Van Deren](https://github.com/Nickvanderen)
 
 ## Some technologies we used
 1. Ruby on Rails.
