@@ -1,6 +1,7 @@
 # Sauté Seattle
 
-A collaborative group project between Jamie Degnan, Piper Denney, Hassan AlMandil and Amanuel Yihdego. @hassa
+A collaborative group project between [a Blaine Anderson](https://github.com/BlaineA97)
+
 
 Ruby on Rails App
 Amazon Web Services, S3, for hosting images of produce, profiles, etc.
@@ -10,4 +11,4 @@ This meant that a large portion of our project was dedicated to discovering how 
 
 Please check our website at http://sautee-seattle.herokuapp.com/
 
-[a link](https://github.com/user/repo/blob/branch/other_file.md)
+[a link](https://github.com/user/repo/blob/branch/other_file.md)[a link](https://github.com/user/repo/blob/branch/other_file.md)
