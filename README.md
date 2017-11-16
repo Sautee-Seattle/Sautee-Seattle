@@ -1,14 +1,10 @@
 # Sauté Seattle
 
-A collaborative group project between [a Blaine Anderson](https://github.com/BlaineA97)
+Please check our [website](http://sautee-seattle.herokuapp.com/)
 
+A collaborative group project between [Blaine Anderson](https://github.com/BlaineA97), [John Simoni](https://github.com/JSimoni42), [Hassan AlMandil](https://github.com/Mandil), [Marlo Ito](https://github.com/Marloito) and [Nick Van Deren](https://github.com/Nickvanderen)
 
-Ruby on Rails App
-Amazon Web Services, S3, for hosting images of produce, profiles, etc.
-Implements google’s map API to help us post locations of where to find produce.
-Using these services provided a well-rounded user-experience.
-This meant that a large portion of our project was dedicated to discovering how to integrate these services into our concept. 
-
-Please check our website at http://sautee-seattle.herokuapp.com/
-
-[a link](https://github.com/user/repo/blob/branch/other_file.md)[a link](https://github.com/user/repo/blob/branch/other_file.md)
+## Some technologies we used
+1. Ruby on Rails.
+2. Amazon Web Services, S3.
+3. Google’s map API.
